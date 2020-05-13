@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('home.index');
 });
+Route::get('pdf','BillingPDF@generate');
+
+
