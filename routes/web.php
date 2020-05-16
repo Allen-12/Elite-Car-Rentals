@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('home.index');
 });
+
+Route::get('/admin/cartypes/create','CarTypeController@create');
+
+Route::post('/admin/cartypes','CarTypeController@store');
+
+Route::get('/admin/cartypes/{carType}/edit','CarTypeController@edit');
+
+Route::patch('/admin/cartypes/{carType}','CarTypeController@update');
