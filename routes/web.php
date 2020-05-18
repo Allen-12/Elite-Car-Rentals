@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello', function (){
+  return 'Its Nyaga bitch';
+});
+Route::get('/reservation', function () {
+    return view('reservation_process.vehicle_reservation');
+});
