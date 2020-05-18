@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CarDescription extends Model
 {
+    protected $guarded = [];
+
     public function carType()
     {
         return $this->belongsTo(CarType::class);

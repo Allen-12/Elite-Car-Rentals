@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+Route::get('/admin','AdminDashboardController@index');
+
 Route::get('/admin/cartypes/create','CarTypeController@create');
 
 Route::post('/admin/cartypes','CarTypeController@store');
@@ -22,3 +24,7 @@ Route::post('/admin/cartypes','CarTypeController@store');
 Route::get('/admin/cartypes/{carType}/edit','CarTypeController@edit');
 
 Route::patch('/admin/cartypes/{carType}','CarTypeController@update');
+
+Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionController@create');
+
+Route::post('/admin/cartypes/{carType}/cardescription','CarDescriptionController@store');
