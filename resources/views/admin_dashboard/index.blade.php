@@ -20,7 +20,19 @@
                             </div>
                         </div>
 
-                        <div class="mt-3">
+                        <h5>View vehicles for a specific car type</h5>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Available Types
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @foreach($carTypes as $carType)
+                                    <a class="dropdown-item" href="/admin/cartypes/{{ $carType->id }}/cardescriptions">{{ $carType->name }}</a>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
                             <h5>Can't find the car type? Create it now!</h5>
                             <a href="/admin/cartypes/create" class="btn btn-dark">Create a new Car Type</a>
                         </div>

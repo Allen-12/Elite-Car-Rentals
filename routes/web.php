@@ -28,3 +28,5 @@ Route::patch('/admin/cartypes/{carType}','CarTypeController@update');
 Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionController@create');
 
 Route::post('/admin/cartypes/{carType}/cardescription','CarDescriptionController@store');
+
+Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController@index');
