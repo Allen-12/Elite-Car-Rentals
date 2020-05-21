@@ -61,7 +61,7 @@
 
 
 	            <div class="form-group">
-	              <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">
+                    <a href="/reservations" class="btn btn-primary py-3 px-3">SEARCH FOR A VEHICLE</a>
 	            </div>
 	    			</form>
           </div>
