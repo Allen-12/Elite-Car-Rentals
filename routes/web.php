@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('home.index');
 });
-
+Route::get('/reservation', function () {
+  return view('reservation_process.vehicle_reservation');
+});
 Route::get('/admin/cartypes/create','CarTypeController@create');
 
 Route::post('/admin/cartypes','CarTypeController@store');

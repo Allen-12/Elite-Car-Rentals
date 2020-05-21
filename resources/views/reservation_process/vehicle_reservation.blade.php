@@ -29,6 +29,11 @@
 .button_table{
     background-color:#fc983c;
 }
+.thumb1 {
+  background: url(uploads/toyota_axio.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 250px;
+  height: 250px;
+}
 </style>
 
   </head>
@@ -76,7 +81,7 @@
 </div>
 <!--TTABLE SHOWING VEHICLES IS HERE NOW-->
 
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
   <thead class="thead-dark">
     <tr>
       <th>Image</th>
@@ -89,7 +94,7 @@
       <!--Loop for displaying retrieved data-->
       <tr>
         <!--Retrieve Image URLs-->
-        <td> <img class="img-fluid" src="uploads/toyota_premio.jpg" alt="">  </td>
+        <td> <img class="card-img-top" src="uploads/toyota_premio.jpg" alt="">  </td>
         <!--Retrieve Vehicle Details-->
         <td><strong class="h3">Toyota Premio</strong> <br><em>Saloon Car</em> <br> Automatic Transmission <br><a href="#">View Vehicle Information</a> </td>
         <!--Retrieve Price Details-->
@@ -97,7 +102,9 @@
       </tr>
       <tr>
         <!--Retrieve Image URLs-->
-        <td> <img class="img-fluid" src="uploads/toyota_axio.jpg" alt=""> </td>
+        <td > <div class="thumb1">
+
+        </div> </td>
         <!--Retrieve Vehicle Details-->
       <td><strong class="h3">Toyota Axio</strong> <br><em>Saloon Car</em> <br> Automatic Transmission <br><a href="#">View Vehicle Information</a> </td>
         <!--Retrieve Price Details-->
@@ -105,7 +112,7 @@
       </tr>
       <tr>
         <!--Retrieve Image URLs-->
-        <td><img class="img-fluid" src="uploads/toyota_belta.jpg" alt="" > </td>
+        <td><img class="card-img-top" src="uploads/toyota_belta.jpg" alt="" > </td>
         <!--Retrieve Vehicle Details-->
         <td><strong class="h3">Toyota Belta</strong> <br><em>Saloon Car</em> <br> Automatic Transmission <br><a href="#">View Vehicle Information</a> </td>
         <!--Retrieve Price Details-->
