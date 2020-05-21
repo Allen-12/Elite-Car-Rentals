@@ -30,3 +30,7 @@ Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionCont
 Route::post('/admin/cartypes/{carType}/cardescription','CarDescriptionController@store');
 
 Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController@index');
+
+Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
+
+Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');

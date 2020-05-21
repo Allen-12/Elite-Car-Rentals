@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h5>Create a vehicle for a specific car type</h5>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Available Types
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -22,7 +22,7 @@
 
                         <h5>View vehicles for a specific car type</h5>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Available Types
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
