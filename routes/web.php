@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+Route::get('/reservations','ReservationController@index');
+
+
+
+// Elite Administrator Routes
 Route::get('/admin','AdminDashboardController@index');
 
 Route::get('/admin/cartypes/create','CarTypeController@create');
