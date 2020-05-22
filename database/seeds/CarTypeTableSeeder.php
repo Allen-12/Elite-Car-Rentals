@@ -14,7 +14,7 @@ class CarTypeTableSeeder extends Seeder
     {
         $carType = new CarType();
 
-        $carType->name = "SUV";
+        $carType->name = "Double Cabin";
         $carType->save();
     }
 }
