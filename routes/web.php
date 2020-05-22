@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+
+/*Route::get('/reservation', function () {
+  return view('reservation_process.vehicle_reservation');
+});
+*/
+
+
+
 Route::get('/reservations','ReservationController@index');
 
 
@@ -40,4 +48,14 @@ Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionControl
 
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
 
-Route::get('pdf','BillingPDF@generate');
+Route::get('pdf', function () {
+    return view('pdf');
+});
+
+Route::get('email_demo', function () {
+    return view('email_demo');
+});
+
+Route::view('email_page','email_demo');
+
+Route::get('mailpdf','BillingPDF@attachment_email');
