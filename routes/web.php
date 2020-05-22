@@ -14,11 +14,11 @@
 Route::get('/', function () {
     return view('home.index');
 });
-<<<<<<< HEAD
+
 Route::get('/reservation', function () {
   return view('reservation_process.vehicle_reservation');
 });
-=======
+
 
 Route::get('/reservations','ReservationController@index');
 
@@ -27,7 +27,7 @@ Route::get('/reservations','ReservationController@index');
 // Elite Administrator Routes
 Route::get('/admin','AdminDashboardController@index');
 
->>>>>>> 20cc0e506136bfb3e694da5d7aee1c9b68fdb8f7
+
 Route::get('/admin/cartypes/create','CarTypeController@create');
 
 Route::post('/admin/cartypes','CarTypeController@store');
