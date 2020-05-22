@@ -25,7 +25,7 @@
           	<form action="#" class="request-form ftco-animate">
               <h2>Make your trip</h2>
 
-	    				<div class="form-group">
+                <div class="form-group">
 
 	    					<label for="" class="label">Pick-up location</label>
 	    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
@@ -42,10 +42,10 @@
             </div>
 
 
-	    				<div class="form-group">
-	    					<label for="" class="label">Drop-off location</label>
-	    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
-	    				</div>
+            <div class="form-group">
+                <label for="" class="label">Drop-off location</label>
+                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+            </div>
 
               <div class="d-flex">
 	              <div class="form-group ml-2">

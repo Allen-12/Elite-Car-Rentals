@@ -48,7 +48,11 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> master
     <div class="row m-0 p-5">
         @foreach($vehicles as $vehicle)
             <div class="col-xl-6">
