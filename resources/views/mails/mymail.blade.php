@@ -9,16 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Elite-Car-Rentals</title>
-    <style>
-    </style>
+    
   </head>
-  <body>
+  <body style="  position: relative;
+
+  height: 29.7cm; 
+
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 12px; 
+  font-family: Arial !important;">
 
 
     <header class="clearfix">
       <div align="center" style="text-align: center;
   margin-bottom: 10px !important;">
-        <img style=" width: 90px !important;" src="{{ asset('uploads/image.png') }}">
+        <!--<img style=" width: 90px !important;" src="{{ asset('images/elitelogo2.png') }}">-->
+       <img style=" width: 90px !important;" src="{{ public_path('images/elitelogo2.png') }}">
       </div>
       <h1 style="border-top:1px solid rgb(11, 11, 12);border-bottom: 1px solid  rgb(11, 11, 12);color: rgb(11, 12, 12);font-size: 2.4em;line-height: 1.4em;font-weight: normal;text-align: center;margin: 0 0 20px 0 !important;">ELITE CAR RENTALS</h1>
       <div class="clearfix" style=" float: right;
