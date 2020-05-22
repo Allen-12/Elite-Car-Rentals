@@ -25,7 +25,11 @@
           	<form action="#" class="request-form ftco-animate">
               <h2>Make your trip</h2>
 
+<<<<<<< HEAD
 	    				<div class="form-group">
+=======
+                <div class="form-group">
+>>>>>>> 54666af3b0830cae730fbebe970092ff6cf08f80
 
 	    					<label for="" class="label">Pick-up location</label>
 	    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
@@ -42,10 +46,17 @@
             </div>
 
 
+<<<<<<< HEAD
 	    				<div class="form-group">
 	    					<label for="" class="label">Drop-off location</label>
 	    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
 	    				</div>
+=======
+            <div class="form-group">
+                <label for="" class="label">Drop-off location</label>
+                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+            </div>
+>>>>>>> 54666af3b0830cae730fbebe970092ff6cf08f80
 
               <div class="d-flex">
 	              <div class="form-group ml-2">
@@ -61,7 +72,7 @@
 
 
 	            <div class="form-group">
-	              <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">
+                    <a href="/reservations" class="btn btn-primary py-3 px-3">SEARCH FOR A VEHICLE</a>
 	            </div>
 	    			</form>
           </div>

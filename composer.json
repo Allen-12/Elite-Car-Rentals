@@ -9,10 +9,16 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "barryvdh/laravel-dompdf": "^0.8.6",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
+<<<<<<< HEAD
         "laravel/ui": "^1.2"
+=======
+        "smodav/mpesa": "^5.1",
+        "ext-gd": "*"
+>>>>>>> 54666af3b0830cae730fbebe970092ff6cf08f80
     },
     "require-dev": {
         "facade/ignition": "^1.4",
