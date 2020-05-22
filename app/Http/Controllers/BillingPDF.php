@@ -26,16 +26,16 @@ use PDF;
 class BillingPDF extends Controller
 {
 	public function attachment_email() {
-      $data = array('name'=>"Fridah Nkirote");
+      $data = array('name'=>"Elite Car Rentals");
       $pdf = PDF::loadView('mails.mymail',$data);
 
       Mail::send('mail', $data, function($message) use($pdf){
-         $message->to('nkirote.mutabari@gmail.com', 'Tutorials Point')->subject
+         $message->to('nkirote.mutabari@gmail.com', 'Peter Pan')->subject
             ('Invoice - Elite Car Rentals ');
      
          $message->attachData($pdf->output(),"Invoice.pdf");
 
-         $message->from('babygirllove396@gmail.com','Fridah Nkirote');
+         $message->from('babygirllove396@gmail.com','Elite Car Rentals');
       });
       echo "Email Sent with attachment. Check your inbox.";
    }

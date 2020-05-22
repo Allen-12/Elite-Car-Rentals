@@ -9,20 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Elite-Car-Rentals</title>
-    
-    <!--<link rel="stylesheet" href="style.css" media="all" />-->
-
-    <!--<link media="all" href="{{ asset('css/style1.css') }}" rel="stylesheet">-->
-
     <style>
-
     </style>
   </head>
   <body>
-   <!-- <form> 
-        <input type="button" value="Print" 
-               onclick="window.print()" /> 
-    </form> -->
+
 
     <header class="clearfix">
       <div align="center" style="text-align: center;
