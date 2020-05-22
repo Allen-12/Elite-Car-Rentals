@@ -39,4 +39,5 @@ Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController
 Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
 
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
+
 Route::get('pdf','BillingPDF@generate');

@@ -34,9 +34,6 @@
             @yield('content')
         </main>
     </div>
-<<<<<<< HEAD
-=======
     <script src="{{ asset('js/app.js') }}"></script>
->>>>>>> 54666af3b0830cae730fbebe970092ff6cf08f80
 </body>
 </html>

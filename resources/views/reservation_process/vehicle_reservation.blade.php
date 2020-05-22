@@ -76,7 +76,7 @@
 </div>
 <!--TTABLE SHOWING VEHICLES IS HERE NOW-->
 
-  <table class="table table-striped">
+  <table class="table table-striped table-responsive-lg">
   <thead class="thead-dark">
     <tr>
       <th>Image</th>

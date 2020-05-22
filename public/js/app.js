@@ -37298,8 +37298,4 @@ module.exports = __webpack_require__(/*! C:\Users\allen\Documents\SCHOOL\ICS\Thi
 
 /***/ })
 
-<<<<<<< HEAD
 /******/ });
-=======
-/******/ });
->>>>>>> 54666af3b0830cae730fbebe970092ff6cf08f80
