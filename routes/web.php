@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('home.index');
 });
+<<<<<<< HEAD
 
 Route::get('/reservations','ReservationController@index');
 
@@ -41,3 +42,20 @@ Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionControl
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
 
 Route::get('pdf','BillingPDF@generate');
+=======
+//Route::get('pdf','BillingPDF@generate');
+
+Route::get('pdf', function () {
+    return view('pdf');
+});
+
+Route::get('email_demo', function () {
+    return view('email_demo');
+});
+
+Route::view('email_page','email_demo');
+
+Route::get('mailpdf','BillingPDF@attachment_email');
+
+// email_page is the route name i'm giving the view, let's see if it will work  
+>>>>>>> 499414d3c84605ad218a897c0f13c1e843563c01
