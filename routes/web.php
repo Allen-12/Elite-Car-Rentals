@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
+
+/* 
+Booking Controller routing
+Used to: create sessions for storing the form values
+         store data before placing them in the database
+*/ 
+
+Route::resource('Booking','BookingController');
+Route::view('/booking/sess', 'BookingController@sessStore');
+Route::post('/booking/sess','BookingController@sessStore');
+
+Route::get('/booking/create','BookingController@create');
+
+Route::post('/booking/create','BookingController@store');
+
+
+
+?>
