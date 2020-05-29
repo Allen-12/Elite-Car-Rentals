@@ -3,10 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Booking;
-use App\CarDescription;
-use App\CarType;
-use App\User;
 
 class LandingPageController extends Controller
 {
