@@ -32,11 +32,11 @@
                         <div class="d-flex">
                             <div class="form-group mr-2">
                                 <label for="pickup_date" class="label">Pick-up date</label>
-                                <input type="text" name="pickup_date" class="form-control" id="book_pick_date" placeholder="Date">
+                                <input type="text" name="pickup_date" class="form-control" id="pickUpDate" autocomplete="off" placeholder="Date">
                             </div>
                             <div class="form-group">
                                 <label for="pickup_time" class="label">Pick-up time</label>
-                                <input type="text" name="pickup_time" class="form-control" id="time_pick" placeholder="Time">
+                                <input type="text" name="pickup_time" class="form-control" id="pickUpTime" placeholder="Time">
                             </div>
                         </div>
                         <div class="form-group">
@@ -47,12 +47,12 @@
                         <div class="d-flex">
                             <div class="form-group ml-2">
                                 <label for="drop_off_date" class="label">Drop-off date</label>
-                                <input type="text" name="drop_off_date" class="form-control" id="book_off_date" placeholder="Date">
+                                <input type="text" name="drop_off_date" class="form-control" id="dropOffDate" autocomplete="off" placeholder="Date">
                             </div>
 
                             <div class="form-group">
                                 <label for="drop_off_time" class="label">Drop-off time</label>
-                                <input type="text" name="drop_off_time" class="form-control" id="time_pick" placeholder="Time">
+                                <input type="text" name="drop_off_time" class="form-control" id="dropOffTime" placeholder="Time">
                             </div>
                         </div>
                         <div class="form-group">
@@ -156,12 +156,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
     <section class="ftco-section services-section img" style="background-image: url(images/bg_2.jpg);">
         <div class="overlay"></div>
         <div class="container">
@@ -211,9 +205,7 @@
             </div>
         </div>
     </section>
-
-
-    @endsection
+@endsection
 
 
 
