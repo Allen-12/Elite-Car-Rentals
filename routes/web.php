@@ -41,17 +41,17 @@ Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController
 Route::get('pdf','BillingPDF@generate');
 //Route::get('pdf','BillingPDF@generate');
 
-Route::get('pdf', function () {
+Route::get('/pdf', function () {
     return view('pdf');
 });
 
-Route::get('email_demo', function () {
+Route::get('/email_demo', function () {
     return view('email_demo');
 });
 
-Route::view('email_page','email_demo');
+Route::view('/email_page','email_demo');
 
-Route::get('mailpdf','BillingPDF@attachment_email');
+Route::get('/mailpdf','BillingPDF@attachment_email');
 
 // email_page is the route name i'm giving the view, let's see if it will work
 
