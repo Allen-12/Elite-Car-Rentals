@@ -1,10 +1,6 @@
+@extends('layouts.master')
 
-  
-  @extends('layouts.master')
-
-    
-	@section('content') 
-    
+@section('content')
     <div class="hero-wrap" style="background-image: url('images/car1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -21,19 +17,17 @@
 		            	<span>View deals</span>
 	            	</div>
 	            </a>
-            </div> 
+            </div>
           </div>
           <div class="col-lg-2 col"></div>
           <div class="col-lg-4 col-md-6 mt-0 mt-md-5 d-flex">
           	<form action="{{'booking/sess'}}" method="POST" class="request-form ftco-animate">
               @csrf
               <h2>Make your trip</h2>
-              
-	    				<div class="form-group">
-                
-	    					<label for="pickup_location" class="label">Pick-up location</label>
-	    					<input name = "pickup_location" type="text" class="form-control" placeholder="City, Airport, Station, etc">
-              </div>
+                <div class="form-group">
+                    <label for="pickup_location" class="label">Pick-up location</label>
+                    <input name = "pickup_location" type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                </div>
               <div class="d-flex">
               <div class="form-group mr-2">
                 <label for="pickup_date" class="label">Pick-up date</label>
@@ -44,26 +38,26 @@
                 <input type="text" name="pickup_time" class="form-control" id="time_pick" placeholder="Time">
               </div>
             </div>
-           
-            
+
+
 	    				<div class="form-group">
 	    					<label for="drop_off_location" class="label">Drop-off location</label>
 	    					<input type="text" name="drop_off_location" class="form-control" placeholder="City, Airport, Station, etc">
 	    				</div>
-	    				
+
               <div class="d-flex">
 	              <div class="form-group ml-2">
 	                <label for="drop_off_date" class="label">Drop-off date</label>
 	                <input type="text" name="drop_off_date" class="form-control" id="book_off_date" placeholder="Date">
 	              </div>
-             
+
               <div class="form-group">
                 <label for="drop_off_time" class="label">Drop-off time</label>
                 <input type="text" name="drop_off_time" class="form-control" id="time_pick" placeholder="Time">
               </div>
             </div>
 
-              
+
 	            <div class="form-group">
 	              <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">
 	            </div>
@@ -82,11 +76,11 @@
               <div class="row">
                 <div class="col">
                     <div class="mx-auto w-50 p-3  text-center">
-                      <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">  
+                      <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">
                     </div>
                 </div>
             </div>
-							
+
 		        </div>
 					</div>
 	    	</div>
@@ -127,7 +121,7 @@
               </a>
               <div class="text pt-4">
               	<div class="meta mb-3">
-                  
+
                 </div>
                 <h3 class="heading mt-2"><a href="#">Cancellations</a></h3>
                 <p>Car Rental reservations made through the elite car rental kenya website are at special rates which reflect our Cancellation and No-show policies.</p>
@@ -140,7 +134,7 @@
               </a>
               <div class="text pt-4">
               	<div class="meta mb-3">
-                  
+
                 </div>
                 <h3 class="heading mt-2"><a href="#">Luxury Vehicles Delivery Charges</a></h3>
                 <p>Delivery charges will apply for all luxury rentals. These will be confirmed to you upon receipt of your reservation request and paid for at start of hire.</p>
@@ -153,8 +147,8 @@
               </a>
               <div class="text pt-4">
               	<div class="meta mb-3">
-                  
-                  
+
+
                 </div>
                 <h3 class="heading mt-2"><a href="#">Overseas Hires</a></h3>
                 <p>All cars (other than luxury vehicles), people carriers with fewer than 8 seats (including the driver) may be taken outside Kenya to the following countries only:- Tanzania, Uganda, Juba at an extra cost.</p>
@@ -163,14 +157,14 @@
           </div>
         </div>
       </div>
-    </section>		
-    
+    </section>
 
 
 
-    
 
-    
+
+
+
     <section class="ftco-section services-section img" style="background-image: url(images/bg_2.jpg);">
     	<div class="overlay"></div>
     	<div class="container">
@@ -188,7 +182,7 @@
                 <h3>Pick Destination</h3>
                 <p>A small river named Duden flows by their place and supplies it with you</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services services-2">
@@ -197,7 +191,7 @@
                 <h3>Select Term</h3>
                 <p>A small river named Duden flows by their place and supplies it with you</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services services-2">
@@ -206,7 +200,7 @@
                 <h3>Choose A Car</h3>
                 <p>A small river named Duden flows by their place and supplies it with you</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services services-2">
@@ -215,15 +209,14 @@
                 <h3>Enjoy The Ride</h3>
                 <p>A small river named Duden flows by their place and supplies it with you</p>
               </div>
-            </div>      
+            </div>
           </div>
     		</div>
     	</div>
     </section>
 
-		
-    @endsection
-    
 
-    
- 
+    @endsection
+
+
+
