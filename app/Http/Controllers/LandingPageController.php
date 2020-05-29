@@ -8,25 +8,17 @@ use App\CarDescription;
 use App\CarType;
 use App\User;
 
-class BookingController extends Controller
+class LandingPageController extends Controller
 {
-
-	public function sessStore(Request $request){
-
-			$request->input();
-			$request->session()->put('pick_up_info', $request->input());
-
-			/*$request->session()->keep([
-				'pickup_location',
-				'pickup_date',
-				'pickup_time',
-				'drop_off_location',
-				'drop_off_date',
-				'drop_off_time'
-			]);
-
-			print_r($request);*/
-			return view('home.index');
+	public function sessionStore()
+    {
+        \request()->session()->put('pickUpLocation', request('pickup_location'));
+        \request()->session()->put('pickUpDate', request('pickup_date'));
+        \request()->session()->put('pickUpTime', request('pickup_time'));
+        \request()->session()->put('dropOffLocation', request('drop_off_location'));
+        \request()->session()->put('dropOffDate', request('drop_off_date'));
+        \request()->session()->put('dropOffTime', request('drop_off_time'));
+        return redirect()->back();
 	}
 
 /*
@@ -34,7 +26,7 @@ class BookingController extends Controller
     public function index(){
     	$booking = Booking::all()->toArray();
     	return view('home.index',compact('booking'));
-    } 
+    }
 
     public function create(){
     	$car = \App\CarDescription::all();
@@ -51,7 +43,7 @@ class BookingController extends Controller
 			'pickup_time' => 'required',
 			'drop_off_location' => 'required',
 			'drop_off_date' => 'required' ,
-			'drop_off_time' => 'required' 
+			'drop_off_time' => 'required'
 	   ]);
 
 	    $booking = new booking([
@@ -60,13 +52,13 @@ class BookingController extends Controller
 			'pickup_time' => $request->get('pickup_time'),
 			'drop_off_location' => $request->get('drop_off_location'),
 			'drop_off_date' => $request->get('drop_date') ,
-			'drop_off_time' => $request->get('drop_time') 
+			'drop_off_time' => $request->get('drop_time')
 
 	    ]);
 
 	    $booking->save();
-	    return redirect()->route('/')->with('succes',"Booking has been placed");	
-   
+	    return redirect()->route('/')->with('succes',"Booking has been placed");
+
     }
     public function show(){
 
