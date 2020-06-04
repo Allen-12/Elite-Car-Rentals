@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LandingPageController extends Controller
+class SessionController extends Controller
 {
-	public function sessionStore()
+	public function storeLandingPageDetails()
     {
         \request()->session()->put('pickUpLocation', request('pickup_location'));
         \request()->session()->put('pickUpDate', request('pickup_date'));
@@ -14,6 +14,6 @@ class LandingPageController extends Controller
         \request()->session()->put('dropOffLocation', request('drop_off_location'));
         \request()->session()->put('dropOffDate', request('drop_off_date'));
         \request()->session()->put('dropOffTime', request('drop_off_time'));
-        return redirect()->back();
+        return redirect('/bookings');
 	}
 }

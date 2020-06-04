@@ -21,13 +21,25 @@
                 </div>
                 <div class="col-lg-2 col"></div>
                 <div class="col-lg-4 col-md-6 mt-0 mt-md-5 d-flex">
-                    <form action="/bookings/startReservation" method="POST" class="request-form ftco-animate">
+                    <form action="/sessions/landingpage" method="POST" class="request-form ftco-animate">
                         @csrf
 
                         <h2>Make your trip</h2>
-                        <div class="form-group">
-                            <label for="pickup_location" class="label">Pick-up location</label>
-                            <input name="pickup_location" type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                        <div class="d-flex">
+                            <div class="form-group mr-2">
+                                <label for="pickup_location" class="label">County</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Available Counties
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        @foreach($counties as $county)
+                                            <p class="dropdown-item">{{ $county->county_name }}<p>
+                                        @endforeach
+                                    </div>
+                                </div>
+{{--                                <input name="pickup_location" type="text" class="form-control" placeholder="County">--}}
+                            </div>
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-2">

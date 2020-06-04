@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('/reservations','ReservationController@index');
+// Booking Routes
+Route::get('/bookings','BookingController@index');
 
+// Session Routes
+Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
 
 
 // Elite Administrator Routes
@@ -39,3 +40,12 @@ Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController
 Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
 
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
+
+Route::get('/admin/counties/create','CountyController@create');
+
+Route::post('/admin/counties','CountyController@store');
+
+Route::get('/admin/counties/{county}/countylocations/create','CountyLocationController@create');
+
+Route::post('/admin/counties/{county}/countylocations','CountyLocationController@store');
+
