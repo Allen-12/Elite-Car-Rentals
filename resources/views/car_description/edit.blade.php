@@ -1,10 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="card">
-        <div class="card-header">Edit Details for {{ $carDescription->make }} {{ $carDescription->model }}</div>
-        <div class="card-body">
-            <form method="POST" enctype="multipart/form-data" action="/admin/cardescriptions/{{ $carDescription->id }}">
+<div class="container h-100 hero w-100 p-4" style="width: 100px; height: 700px; background-color: rgba(251, 251, 253, 0.1); background: url('images/three.jpg') no-repeat center ; background-size: cover;">
+<div class="row h-100 justify-content-center align-items-center"   ></div>
+    <div class="card view overlay" style="max-width: 100rem;">
+        <div class="header pt-3 peach-gradient"  style="background-color:rgba(243, 133, 7, 0.514)"><h4 class="h1-responsive  text-center my-4">Edit Details for {{ $carDescription->make }} {{ $carDescription->model }}</h4></div>
+        <div class="card-body  card-body-cascade">
+            <form class="col-20" method="POST" enctype="multipart/form-data" action="/admin/cardescriptions/{{ $carDescription->id }}">
                 @csrf
                 @method('PATCH')
 
@@ -68,8 +70,9 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-warning mt-1">Edit Details</button>
+                <button type="submit" style="background-color:orange; border-color:orange; " class=" btn btn-raised btn-rounded z-depth-1 btn-warning">Edit Details</button>
             </form>
         </div>
     </div>
+    
 @endsection

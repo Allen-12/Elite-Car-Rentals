@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">Edit Car Type</div>
+        <div class="card-header text-center " style="background-color:rgba(243, 133, 7, 0.514)"><h2>Edit Car Type</h2></div>
         <div class="card-body">
             <form method="POST" action="/admin/cartypes/{{ $carType->id }}">
                 @csrf

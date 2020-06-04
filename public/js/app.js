@@ -37292,11 +37292,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\allen\Documents\SCHOOL\ICS\Third Year\Semester I\Human Computer Interaction\elite_car_rentals\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\allen\Documents\SCHOOL\ICS\Third Year\Semester I\Human Computer Interaction\elite_car_rentals\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\steph\Desktop\elite-car-rentals\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\steph\Desktop\elite-car-rentals\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
 
-/******/ });
 /******/ });
