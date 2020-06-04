@@ -80,7 +80,11 @@
 
 <!--TABLE SHOWING VEHICLES IS HERE NOW-->
 
+<<<<<<< HEAD
 <table class="table table-striped table-dark table-responsive-lg">
+=======
+<table class="table table-striped table-bordered table-responsive">
+>>>>>>> 90d50377cccc5c258d171c19f817591afab861f2
     <thead class="thead-dark">
         <tr>
           <th colspan="">Image</th>
