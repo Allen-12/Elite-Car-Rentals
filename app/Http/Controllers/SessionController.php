@@ -16,4 +16,9 @@ class SessionController extends Controller
         \request()->session()->put('dropOffTime', request('drop_off_time'));
         return redirect('/bookings');
 	}
+
+    public function storeVehicles()
+    {
+        
+	}
 }

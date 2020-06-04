@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,7 @@ Route::get('/bookings','BookingController@index');
 
 // Session Routes
 Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
+Route::get('/sessions/vehicleReservation','SessionController@storeVehicles');
 
 
 // Elite Administrator Routes

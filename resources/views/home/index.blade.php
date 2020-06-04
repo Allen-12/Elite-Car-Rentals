@@ -28,18 +28,18 @@
                         <div class="d-flex">
                             <div class="form-group mr-2">
                                 <label for="pickup_location" class="label">County</label>
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Available Counties
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        @foreach($counties as $county)
-                                            <p class="dropdown-item">{{ $county->county_name }}<p>
-                                        @endforeach
-                                    </div>
-                                </div>
-{{--                                <input name="pickup_location" type="text" class="form-control" placeholder="County">--}}
+                                <input name="pickup_location" type="text" class="form-control" placeholder="County">
                             </div>
+{{--                                <div class="dropdown">--}}
+{{--                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                                        Available Counties--}}
+{{--                                    </button>--}}
+{{--                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
+{{--                                        @foreach($counties as $county)--}}
+{{--                                            <p class="dropdown-item">{{ $county->county_name }}<p>--}}
+{{--                                        @endforeach--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-2">

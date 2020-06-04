@@ -9,8 +9,12 @@ class BookingController extends Controller
 {
     public function index()
     {
-        $vehicles = CarDescription::with('carType')->get();
-//        dd($vehicles);
-        return view('booking.index',compact('vehicles'));
+        $vehicles = CarDescription::with('carType')
+                    ->where('availability','=','1')
+                    ->get();
+//
+        $sessionData = session()->all();
+//        dd($sessionData['pickUpDate']);
+        return view('booking.index',compact('vehicles','sessionData'));
     }
 }
