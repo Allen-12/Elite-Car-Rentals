@@ -293,9 +293,9 @@
   });
 
 	$('#pickUpDate').datepicker({
-	  'format': 'dd/mm/yyyy',
+	    'format': 'dd/mm/yyyy',
         'startDate': new Date(),
-	  'autoclose': true,
+	    'autoclose': true,
 	}).on('changeDate', function(e){
         $('#dropOffDate').datepicker({
             'format': 'dd/mm/yyyy',
