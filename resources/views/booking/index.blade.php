@@ -1,81 +1,36 @@
+@extends('layouts.user')
+
+@section('content')
 
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ config('app.name') }}</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <style media="screen">
-            .col-sm-4
-            {
-            border-right-style: inset ;
-            margin: 30px;
-            justify-content: space-between;
-            }
-            #container
-            {
-              background-color: #c0c0c0;
-            }
-            .test_section
-            {
-              display: inline-block;
-              width: 12%;
-              border-radius: 50%;
-              background-color:#fc983c;
-              color: white;
-              padding: 14px 18px;
-              font-size: 16px;
-              margin: 15px 80px;
-              text-align: center;
-            }
-            .button_table
-            {
-                background-color:#fc983c;
-            }
-        </style>
-</head>
 
-<body>
-    <div class="container-fluid">
+
         <!--Navbar Here-->
-        <nav class="navbar navbar-dark bg-dark text-justify">
-            <a class="navbar-brand">{{ config('app.name') }}</a>
-{{--        <div class="navbar-nav">--}}
-{{--            <a class="nav-item nav-link" href="#">Log In</a>--}}
-{{--        </div>--}}
-        </nav>
 
-    {{--    <!--Multifrom Navigation Section Here-->--}}
-    {{--    <div id="container">--}}
-    {{--      <div class="d-flex justify-content-between">--}}
-    {{--        <button class="test_section btn btn-primary" type="button" name="button">Step 1</button>--}}
-    {{--        <button class="test_section btn btn-warning" type="button" name="button">Step 2</button>--}}
-    {{--        <button class="test_section btn btn-danger" type="button" name="button">Step 3</button>--}}
-    {{--        <button class="test_section btn btn-info" type="button" name="button">Step 4</button>--}}
-    {{--      </div>--}}
-    {{--    </div>--}}
 
+  <!--Multifrom Navigation Section Here-->
+
+<div class="container-fluid">
           <!--SUMMARY OF CURRENT BOOKING IS SHOWN HERE-->
-        <div class="mt-3">
+        <div class="mt-3" style="color:white;">
             <div class="row">
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="text-muted">Location: {{ $sessionData['pickUpLocation'] }}</small><br>
+                        <small class="">Location: {{ $sessionData['pickUpLocation'] }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
-                        <em class="text-muted">Date: {{ $sessionData['pickUpDate'] }}</em><br>
-                        <em class="text-muted">Time: {{ $sessionData['pickUpTime'] }}</em>
+                        <em class="">Date: {{ $sessionData['pickUpDate'] }}</em><br>
+                        <em class="">Time: {{ $sessionData['pickUpTime'] }}</em>
                     </p>
                 </div>
 
-                <div class="col-lg-2 d-flex" style="text-align: right">
+                <div class="col-lg-2 d-flex" style="text-align: right;">
                     <p><strong class="h5">Drop Off</strong><br>
                         <!--Retrieve Drop Off-->
                         <small>Location: {{ $sessionData['dropOffLocation'] }}</small> <br>
                         <!--Retrieve Drop Off Day and Time-->
-                        <em class="text-muted">Date: {{ $sessionData['dropOffDate'] }}</em><br>
-                        <em class="text-muted">Time: {{ $sessionData['dropOffTime'] }}</em>
+                        <em class="">Date: {{ $sessionData['dropOffDate'] }}</em><br>
+                        <em class="">Time: {{ $sessionData['dropOffTime'] }}</em>
                     </p>
                 </div>
             </div>
@@ -85,20 +40,23 @@
             @foreach($vehicles as $vehicle)
                 <div class="col-md-6 col-lg-4">
                     <a href="#" style="color: inherit">
-                        <div class="card" style="width: 25rem ;margin-bottom: 20px">
+                        <div class="card" style="width: 25rem ;margin-bottom: 20px; background-color:#D0D0D0;">
                             <img class="card-img-top" src="{{ asset('storage/'.$vehicle->image) }}" alt="Card image cap" style="height: 200px">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $vehicle->make }} {{ $vehicle->model }}</h5>
+                                <h5 class="card-title"><strong>{{ $vehicle->make }} {{ $vehicle->model }}</strong> </h5>
                                 <p class="card-text">{{ $vehicle->carType->name }}</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Automatic Transmission</li>
+                                <li class="list-group-item ">Automatic Transmission</li>
+                                  <li class="list-group-item">Price per Day: KES {{ $vehicle->base_price_per_day }}</li>
                                 @if($vehicle->availability == 1)
                                     <li class="list-group-item">Status: Available</li>
+
                                 @else
-                                    <li class="list-group-item">Status: Not Available</li>
+                                    <li class="list-group-item disabled">Status: Not Available</li>
                                 @endif
-                                <li class="list-group-item">Price per Day: KES {{ $vehicle->base_price_per_day }}</li>
+
+
                             </ul>
                         </div>
                     </a>
@@ -146,3 +104,4 @@
 {{--        @endforeach--}}
 {{--    </tbody>--}}
 {{--</table>--}}
+@endsection

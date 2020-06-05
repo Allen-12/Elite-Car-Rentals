@@ -33,10 +33,13 @@
             {
                 background-color:#fc983c;
             }
+            body{
+            color: #343a40;
+            }
         </style>
 </head>
 
-<body>
+<body class="">
 <!--Navbar Here-->
       <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand">{{ config('app.name') }}</a>

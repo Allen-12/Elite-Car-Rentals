@@ -5,7 +5,7 @@
 
 <div class=" hero w-100 p-4"  style="width: 100px; height: 700px; background-color: rgba(251, 251, 253, 0.1); background: url({{ asset('images/three.jpg') }}) no-repeat center ; background-size: cover;" >
     <div class="card-header text-center " style="background-color:rgba(243, 133, 7, 0.514)"><h2>Administrator Dashboard</h2></div>
-    <div class="card " style="margin: auto">
+    <div class="card " style="margin: auto; opacity:0.95">
         <div class="card-body">
             <div class="card promoting-card" >
                 <div class="card-body d-flex flex-row">
