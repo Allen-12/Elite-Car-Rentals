@@ -26,8 +26,20 @@
 
                         <h2>Make your trip</h2>
                         <div class="form-group">
-                            <label for="pickup_location" class="label">Pick-up location</label>
-                            <input name="pickup_location" type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                            <label for="pickup_location" class="label">County</label>
+                            <div>
+                                <select name="service_type" id="service_type" class="selectpicker">
+                                    @foreach ($classname_array as
+                                     $data)
+                                     <option value="{{ $data->id }}" >{{ $data->county_name}} </option>
+                                     @endforeach
+                                </select>
+                            </div>
+                          
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="label">Pick-up Location</label>
+                            <input type="text" name="drop_off_location" class="form-control" placeholder="building,estate, office etc">
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-2">
