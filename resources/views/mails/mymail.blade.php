@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Elite-Car-Rentals</title>
-    
+
   </head>
   <body style="  position: relative;
 
-  height: 29.7cm; 
+  height: 29.7cm;
 
   color: #001028;
-  background: #FFFFFF; 
-  font-family: Arial, sans-serif; 
-  font-size: 12px; 
+  background: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   font-family: Arial !important;">
 
 
@@ -53,15 +53,15 @@
   margin-bottom:20px !important;">
         <thead>
           <tr>
-            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;  
+            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;
   font-weight:normal; text-align: left !important;">SERVICE</th>
-            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;  
+            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;
   font-weight:normal; text-align: left !important;">DESCRIPTION</th>
-            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;  
+            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;
   font-weight:normal; text-align: center !important;">PRICE</th>
-            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;  
+            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;
   font-weight:normal; text-align: center !important;">DURATION(DAYS)</th>
-            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;  
+            <th style=" padding:5px 20px;color:rgb(102,113,124);border-bottom: 1px solid #C1CED9;white-space:nowrap;
   font-weight:normal; text-align: center !important;">TOTAL</th>
           </tr>
         </thead>
