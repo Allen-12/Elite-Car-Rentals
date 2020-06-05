@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,11 +13,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('/reservations','ReservationController@index');
+// Booking Routes
+Route::get('/bookings','BookingController@index');
+
+// Session Routes
+Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
+Route::get('/sessions/vehicleReservation','SessionController@storeVehicles');
+
 
 // Elite Administrator Routes
 Route::get('/admin','AdminDashboardController@index');
@@ -27,6 +33,25 @@ Route::post('/admin/cartypes','CarTypeController@store');
 Route::get('/admin/cartypes/{carType}/edit','CarTypeController@edit');
 
 Route::patch('/admin/cartypes/{carType}','CarTypeController@update');
+
+Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionController@create');
+
+Route::post('/admin/cartypes/{carType}/cardescription','CarDescriptionController@store');
+
+Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController@index');
+
+Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
+
+Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
+
+Route::get('/admin/counties/create','CountyController@create');
+
+Route::post('/admin/counties','CountyController@store');
+
+Route::get('/admin/counties/{county}/countylocations/create','CountyLocationController@create');
+
+Route::post('/admin/counties/{county}/countylocations','CountyLocationController@store');
+
 
 Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionController@create');
 

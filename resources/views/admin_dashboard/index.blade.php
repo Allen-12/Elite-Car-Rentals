@@ -34,7 +34,24 @@
 
                         <div class="mt-2">
                             <h5>Can't find the car type? Create it now!</h5>
-                            <a href="/admin/cartypes/create" class="btn btn-dark">Create a new Car Type</a>
+                            <a href="/admin/cartypes/create" class="btn btn-dark">Add a new Car Type</a>
+                        </div>
+
+                        <div class="mt-2">
+                            <h5>Add a County in which your vehicles can be picked from</h5>
+                            <a href="/admin/counties/create" class="btn btn-dark">Add a county</a>
+                        </div>
+
+                        <h5 class="mt-2">Add a specific location in a county that will be used for pickup and drop off of vehicles</h5>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Available Counties
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @foreach($counties as $county)
+                                    <a class="dropdown-item" href="/admin/counties/{{ $county->id }}/countylocations/create">{{ $county->county_name }}</a>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
