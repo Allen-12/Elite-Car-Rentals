@@ -1,8 +1,3 @@
-<title>ELITE CAR RENTALS</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<<<<<<< HEAD
     <title>ELITE CAR RENTALS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,9 +25,7 @@
     <link rel="stylesheet" href="/css/flaticon.css">
     <link rel="stylesheet" href="/css/icomoon.css">
     <link rel="stylesheet" href="/css/style.css">
-    <li
-=======
-<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/animate.css')}}">
@@ -51,4 +44,3 @@
 <link rel="stylesheet" href="{{ asset('css/flaticon.css')}}">
 <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
->>>>>>> 90d50377cccc5c258d171c19f817591afab861f2

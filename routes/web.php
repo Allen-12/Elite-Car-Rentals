@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('home.index');
 });
 
-<<<<<<< HEAD
+
 
 /*Route::get('/reservation', function () {
   return view('reservation_process.vehicle_reservation');
@@ -24,8 +24,6 @@ Route::get('/', function () {
 
 
 
-=======
->>>>>>> 90d50377cccc5c258d171c19f817591afab861f2
 Route::get('/reservations','ReservationController@index');
 
 
@@ -50,7 +48,7 @@ Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController
 Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
 
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
-<<<<<<< HEAD
+
 
 Route::get('pdf', function () {
     return view('pdf');
@@ -63,5 +61,3 @@ Route::get('email_demo', function () {
 Route::view('email_page','email_demo');
 
 Route::get('mailpdf','BillingPDF@attachment_email');
-=======
->>>>>>> 90d50377cccc5c258d171c19f817591afab861f2

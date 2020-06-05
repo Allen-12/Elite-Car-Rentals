@@ -2,70 +2,6 @@
 
 @section('content')
     <div class="hero-wrap" style="background-image: url('images/car1.jpg');" data-stellar-background-ratio="0.5">
-<<<<<<< HEAD
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text justify-content-start align-items-center">
-          <div class="col-lg-6 col-md-6 ftco-animate d-flex align-items-end">
-          	<div class="text">
-	            <h1 class="mb-4">Now <span>It's easy for you</span> <span>rent a car</span></h1>
-	            <p style="font-size: 18px;">Daily car rental deals on saloons, suvs, vans, compact 4wd</p>
-	            <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4">
-	            	<div class="icon d-flex align-items-center justify-content-center">
-	            		<span class="ion-ios-play"></span>
-	            	</div>
-	            	<div class="heading-title ml-5">
-		            	<span>View deals</span>
-	            	</div>
-	            </a>
-            </div>
-          </div>
-          <div class="col-lg-2 col"></div>
-          <div class="col-lg-4 col-md-6 mt-0 mt-md-5 d-flex">
-          	<form action="#" class="request-form ftco-animate">
-              <h2>Make your trip</h2>
-
-                <div class="form-group">
-
-	    					<label for="" class="label">Pick-up location</label>
-	    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
-              </div>
-              <div class="d-flex">
-              <div class="form-group mr-2">
-                <label for="" class="label">Pick-up date</label>
-                <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
-              </div>
-              <div class="form-group">
-                <label for="" class="label">Pick-up time</label>
-                <input type="text" class="form-control" id="time_pick" placeholder="Time">
-              </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="" class="label">Drop-off location</label>
-                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
-            </div>
-
-              <div class="d-flex">
-	              <div class="form-group ml-2">
-	                <label for="" class="label">Drop-off date</label>
-	                <input type="text" class="form-control" id="book_off_date" placeholder="Date">
-	              </div>
-
-              <div class="form-group">
-                <label for="" class="label">Drop-off time</label>
-                <input type="text" class="form-control" id="time_pick" placeholder="Time">
-              </div>
-            </div>
-
-
-	            <div class="form-group">
-                    <a href="/reservations" class="btn btn-primary py-3 px-3">SEARCH FOR A VEHICLE</a>
-	            </div>
-	    			</form>
-          </div>
-=======
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center">
@@ -125,8 +61,7 @@
                     </form>
                 </div>
             </div>
->>>>>>> 90d50377cccc5c258d171c19f817591afab861f2
-        </div>
+
     </div>
 
     <section class="ftco-section ftco-no-pb ftco-no-pt">
