@@ -10,7 +10,7 @@ class CarTypeController extends Controller
     public function create()
     {
         $carTypes = CarType::all();
-        return view('car_type.create',compact('carTypes'));
+        return view('admin_car_type.create',compact('carTypes'));
     }
 
     public function store()
@@ -26,7 +26,7 @@ class CarTypeController extends Controller
 
     public function edit(CarType $carType)
     {
-        return view('car_type.edit',compact('carType'));
+        return view('admin_car_type.edit',compact('carType'));
     }
 
     public function update(CarType $carType)

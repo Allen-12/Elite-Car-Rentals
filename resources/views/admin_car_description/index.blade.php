@@ -1,20 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h2 class="text-center"> Available Cars</h2>
-    <div class="row m-0 p-5">
-        @foreach($vehicles as $vehicle)
-            <div class="col-xl-6">
-                <div class="card mb-2" style="width: 38rem;">
-                    <img class="card-img-top" src="{{ asset('storage/'.$vehicle->image) }}" alt="Card image cap" style="object-fit: cover;" height="300px">
     <h3>Available Cars</h3>
     <div class="row m-0 p-0">
         @foreach($vehicles as $vehicle)
             <div class="col-sm-6">
                 <div class="card mb-2" style="width: 38rem;">
                     <img class="card-img-top" src="{{ asset('storage/'.$vehicle->image) }}" alt="Card image cap" style="object-fit: cover">
-=======
->>>>>>> ebe992c384772fed65d2b4b09329da9c2b59b89c
                     <div class="card-body">
                         <h5 class="card-title">{{ $vehicle->make }} {{ $vehicle->model }}</h5>
                         <p class="card-text">{{ $vehicle->number_plate }}</p>
@@ -34,5 +26,3 @@
     </div>
 @endsection
 
-=======
->>>>>>> ebe992c384772fed65d2b4b09329da9c2b59b89c

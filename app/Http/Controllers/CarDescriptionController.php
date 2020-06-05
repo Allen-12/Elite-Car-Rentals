@@ -10,7 +10,7 @@ class CarDescriptionController extends Controller
 {
     public function create(CarType $carType)
     {
-        return view('car_description.create',compact('carType'));
+        return view('admin_car_description.create',compact('carType'));
     }
 
     public function store(CarType $carType)
@@ -36,13 +36,13 @@ class CarDescriptionController extends Controller
     {
         $vehicles = CarDescription::where('car_type_id','=',$carType->id)->get();
 //        dd($vehicles);
-        return view('car_description.index',compact('vehicles'));
+        return view('admin_car_description.index',compact('vehicles'));
     }
 
     public function edit(CarDescription $carDescription)
     {
 //        dd($carDescription);
-        return view('car_description.edit',compact('carDescription'));
+        return view('admin_car_description.edit',compact('carDescription'));
     }
 
     public function update(CarDescription $carDescription)
