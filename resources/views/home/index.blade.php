@@ -26,20 +26,21 @@
 
                         <h2>Make your trip</h2>
                         <div class="d-flex">
-                            <div class="form-group mr-2">
-                                <label for="pickup_location" class="label">County</label>
-                                <input name="pickup_location" type="text" class="form-control" placeholder="County">
+                            <div class="form-group mr-3">
+                                <label for="countiesPickUp" class="label">Select a County for pickup</label>
+                                <select class="form-control" id="countiesPickUp" name="countiesPickUp">
+                                    <option>Select a county</option>
+                                    @foreach($counties as $id => $county)
+                                        <option class="dropdown-item" value="{{ $id }}">{{ $county }}</option>
+                                    @endforeach
+                                </select>
                             </div>
-{{--                                <div class="dropdown">--}}
-{{--                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                                        Available Counties--}}
-{{--                                    </button>--}}
-{{--                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
-{{--                                        @foreach($counties as $county)--}}
-{{--                                            <p class="dropdown-item">{{ $county->county_name }}<p>--}}
-{{--                                        @endforeach--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
+                            <div class="form-group">
+                                <label for="countyLocationsPickUp" class="label">Pick-Up Location</label>
+                                <select class="form-control" id="countyLocationsPickUp" name="countyLocationsPickup">
+                                    <option></option>
+                                </select>
+                            </div>
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-2">
@@ -51,13 +52,26 @@
                                 <input type="text" name="pickup_time" class="form-control" id="pickUpTime" placeholder="Time">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="drop_off_location" class="label">Drop-off location</label>
-                            <input type="text" name="drop_off_location" class="form-control" placeholder="City, Airport, Station, etc">
+                        <div class="d-flex">
+                            <div class="form-group mr-4">
+                                <label for="countiesDropOff" class="label">Select a County for drop-off</label>
+                                <select class="form-control" id="countiesDropOff" name="countiesDropOff">
+                                    <option>Select a County</option>
+                                    @foreach($counties as $id => $county)
+                                        <option class="dropdown-item" value="{{ $id }}">{{ $county }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="countyLocationsDropOff" class="label">Drop-off Location</label>
+                                <select class="form-control" id="countyLocationsDropOff" name="countyLocationsDropOff">
+                                    <option></option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="d-flex">
-                            <div class="form-group ml-2">
+                            <div class="form-group mr-2">
                                 <label for="drop_off_date" class="label">Drop-off date</label>
                                 <input type="text" name="drop_off_date" class="form-control" id="dropOffDate" autocomplete="off" placeholder="Date">
                             </div>

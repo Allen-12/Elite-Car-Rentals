@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('countyLocations/{countyName}','HomeController@getCountyLocations');
 
 // Booking Routes
 Route::get('/bookings','BookingController@index');
