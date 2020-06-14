@@ -21,8 +21,8 @@
 
                     <div class="collapse navbar-collapse" id="ftco-nav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a href="index.html" class="nav-link"><h4>Home</h4></a></li>
-                            <li class="nav-item"><a href="logout.html" class="nav-link"><h4>Log Out</h4></a></li>
+                            <li class="nav-item active"><a href="index.html" class="nav-link"><h5 style=" font:sans-serif">Home</h5></a></li>
+                            <li class="nav-item"><a href="logout.html" class="nav-link"><h5>Log Out</h5></a></li>
                         </ul>
                     </div>
                 </div>
