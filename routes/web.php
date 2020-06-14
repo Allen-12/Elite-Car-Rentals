@@ -53,3 +53,30 @@ Route::get('/admin/counties/{county}/countylocations/create','CountyLocationCont
 
 Route::post('/admin/counties/{county}/countylocations','CountyLocationController@store');
 
+
+Route::get('/admin/cartypes/{carType}/cardescription/create','CarDescriptionController@create');
+
+Route::post('/admin/cartypes/{carType}/cardescription','CarDescriptionController@store');
+
+Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController@index');
+
+Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
+
+Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
+
+Route::get('pdf','BillingPDF@generate');
+//Route::get('pdf','BillingPDF@generate');
+
+Route::get('/pdf', function () {
+    return view('pdf');
+});
+
+Route::get('/email_demo', function () {
+    return view('email_demo');
+});
+
+Route::view('/email_page','email_demo');
+
+Route::get('/mailpdf','BillingPDF@attachment_email');
+
+// email_page is the route name i'm giving the view, let's see if it will work
