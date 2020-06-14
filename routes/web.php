@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,15 +13,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
-Route::get('pdf','BillingPDF@generate');
+Route::get('/', 'HomeController@index');
+Route::get('countyLocations/{countyName}','HomeController@getCountyLocations');
 
+// Booking Routes
+Route::get('/bookings','BookingController@index');
 
-
-Route::get('/reservations','ReservationController@index');
-
+// Session Routes
+Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
+Route::get('/sessions/vehicleReservation','SessionController@storeVehicles');
 
 
 // Elite Administrator Routes
@@ -42,3 +44,12 @@ Route::get('/admin/cartypes/{carType}/cardescriptions','CarDescriptionController
 Route::get('/admin/cardescriptions/{carDescription}/edit','CarDescriptionController@edit');
 
 Route::patch('/admin/cardescriptions/{carDescription}','CarDescriptionController@update');
+
+Route::get('/admin/counties/create','CountyController@create');
+
+Route::post('/admin/counties','CountyController@store');
+
+Route::get('/admin/counties/{county}/countylocations/create','CountyLocationController@create');
+
+Route::post('/admin/counties/{county}/countylocations','CountyLocationController@store');
+
