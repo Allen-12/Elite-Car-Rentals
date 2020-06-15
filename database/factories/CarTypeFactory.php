@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(CarType::class, function (Faker $faker)
 {
+    $faker->addProvider(new Fakecar($faker));
     return [
 
     ];

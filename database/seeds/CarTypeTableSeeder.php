@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\CarType;
+use \App\CarType;
 
 class CarTypeTableSeeder extends Seeder
 {
@@ -12,9 +12,20 @@ class CarTypeTableSeeder extends Seeder
      */
     public function run()
     {
-        $carType = new CarType();
+        $carType1 = new CarType();
+        $carType1->name = "Saloon Car";
+        $carType1->save();
 
-        $carType->name = "Double Cabin";
-        $carType->save();
+        $carType2 = new CarType();
+        $carType2->name = "SUV";
+        $carType2->save();
+
+        $carType3 = new CarType();
+        $carType3->name = "Double Cabin";
+        $carType3->save();
+
+        $carType4 = new CarType();
+        $carType4->name = "Van";
+        $carType4->save();
     }
 }

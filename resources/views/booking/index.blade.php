@@ -60,9 +60,10 @@
         <div class="mt-3">
             <div class="row">
                 <div class="col-lg-10">
-                    <p><strong class="h5">Pick Up</strong><br>
+                    <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="text-muted">Location: {{ $sessionData['pickUpLocation'] }}</small><br>
+                        <small class="text-muted">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
+                        <small class="text-muted">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
                         <em class="text-muted">Date: {{ $sessionData['pickUpDate'] }}</em><br>
                         <em class="text-muted">Time: {{ $sessionData['pickUpTime'] }}</em>
@@ -70,9 +71,10 @@
                 </div>
 
                 <div class="col-lg-2 d-flex" style="text-align: right">
-                    <p><strong class="h5">Drop Off</strong><br>
+                    <p><strong class="h5">Drop Off Details</strong><br>
                         <!--Retrieve Drop Off-->
-                        <small>Location: {{ $sessionData['dropOffLocation'] }}</small> <br>
+                        <small class="text-muted">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
+                        <small class="text-muted">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Drop Off Day and Time-->
                         <em class="text-muted">Date: {{ $sessionData['dropOffDate'] }}</em><br>
                         <em class="text-muted">Time: {{ $sessionData['dropOffTime'] }}</em>

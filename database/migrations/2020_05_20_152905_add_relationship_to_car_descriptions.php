@@ -14,7 +14,8 @@ class AddRelationshipToCarDescriptions extends Migration
     public function up()
     {
         Schema::table('car_descriptions', function (Blueprint $table) {
-            $table->foreign('car_type_id')->references('id')->on('car_types')->onDelete('cascade');
+            $table->foreign('car_type_id')->references('id')->on('car_types')
+                    ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
