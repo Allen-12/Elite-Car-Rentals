@@ -1,51 +1,6 @@
+@extends('layouts.user')
 
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ config('app.name') }}</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <style media="screen">
-            .col-sm-4
-            {
-            border-right-style: inset ;
-            margin: 30px;
-            justify-content: space-between;
-            }
-            #container
-            {
-              background-color: #c0c0c0;
-            }
-            .test_section
-            {
-              display: inline-block;
-              width: 12%;
-              border-radius: 50%;
-              background-color:#fc983c;
-              color: white;
-              padding: 14px 18px;
-              font-size: 16px;
-              margin: 15px 80px;
-              text-align: center;
-            }
-            .button_table
-            {
-                background-color:#fc983c;
-            }
-        </style>
-</head>
-
-<body>
-    <div class="container-fluid">
-        <!--Navbar Here-->
-        <nav class="navbar navbar-dark bg-dark text-justify">
-            <a class="navbar-brand">{{ config('app.name') }}</a>
-{{--        <div class="navbar-nav">--}}
-{{--            <a class="nav-item nav-link" href="#">Log In</a>--}}
-{{--        </div>--}}
-        </nav>
-
+@section('content')
     {{--    <!--Multifrom Navigation Section Here-->--}}
     {{--    <div id="container">--}}
     {{--      <div class="d-flex justify-content-between">--}}
@@ -62,6 +17,7 @@
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
+                        <small class="text-muted">Location: {{ $sessionData['pickUpCounty'] }} , {{$sessionData['pickUpCountyLocation']}}</small><br>
                         <small class="text-muted">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
                         <small class="text-muted">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
@@ -73,6 +29,7 @@
                 <div class="col-lg-2 d-flex" style="text-align: right">
                     <p><strong class="h5">Drop Off Details</strong><br>
                         <!--Retrieve Drop Off-->
+                        <small>Location: {{ $sessionData['dropOffCounty'] }} , {{$sessionData['dropOffCountyLocation']}}</small> <br>
                         <small class="text-muted">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
                         <small class="text-muted">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Drop Off Day and Time-->
@@ -148,3 +105,4 @@
 {{--        @endforeach--}}
 {{--    </tbody>--}}
 {{--</table>--}}
+@endsection

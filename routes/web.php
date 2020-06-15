@@ -53,3 +53,6 @@ Route::get('/admin/counties/{county}/countylocations/create','CountyLocationCont
 
 Route::post('/admin/counties/{county}/countylocations','CountyLocationController@store');
 
+Route::get('/mailpdf','BillingPDF@attachment_email');
+
+// email_page is the route name i'm giving the view, let's see if it will work

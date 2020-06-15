@@ -27,7 +27,7 @@
                         <h2>Make your trip</h2>
                         <div class="d-flex">
                             <div class="form-group mr-3">
-                                <label for="countiesPickUp" class="label">Select a County for pickup</label>
+                                <label for="countiesPickUp" class="label">County for pickup</label>
                                 <select class="form-control" id="countiesPickUp" name="countiesPickUp">
                                     <option>Select a county</option>
                                     @foreach($counties as $id => $county)
@@ -66,7 +66,7 @@
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-4">
-                                <label for="countiesDropOff" class="label">Select a County for drop-off</label>
+                                <label for="countiesDropOff" class="label">County for drop-off</label>
                                 <select class="form-control" id="countiesDropOff" name="countiesDropOff">
                                     <option>Select a County</option>
                                     @foreach($counties as $id => $county)
@@ -256,6 +256,3 @@
         </div>
     </section>
 @endsection
-
-
-
