@@ -17,7 +17,6 @@
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="text-muted">Location: {{ $sessionData['pickUpCounty'] }} , {{$sessionData['pickUpCountyLocation']}}</small><br>
                         <small class="text-muted">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
                         <small class="text-muted">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
@@ -29,7 +28,6 @@
                 <div class="col-lg-2 d-flex" style="text-align: right">
                     <p><strong class="h5">Drop Off Details</strong><br>
                         <!--Retrieve Drop Off-->
-                        <small>Location: {{ $sessionData['dropOffCounty'] }} , {{$sessionData['dropOffCountyLocation']}}</small> <br>
                         <small class="text-muted">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
                         <small class="text-muted">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Drop Off Day and Time-->
@@ -67,42 +65,4 @@
     </div>
 </body>
 </html>
-
-<!--TABLE SHOWING VEHICLES IS HERE NOW-->
-
-{{--<table class="table table-striped table-bordered table-responsive mt-3">--}}
-{{--    <thead class="thead-dark">--}}
-{{--        <tr>--}}
-{{--          <th colspan="">Image</th>--}}
-{{--          <th colspan="">Details</th>--}}
-{{--          <th colspan="">Pricing</th>--}}
-{{--        </tr>--}}
-{{--    </thead>--}}
-
-{{--    <tbody>--}}
-{{--        @foreach($vehicles as $vehicle)--}}
-{{--            <tr>--}}
-{{--                <!--Retrieve Image URLs-->--}}
-{{--                <td width="300em" height="150em"><img class="img-fluid"  src="{{ asset('storage/'.$vehicle->image) }}" alt=""></td>--}}
-{{--                <!--Retrieve Vehicle Details-->--}}
-{{--                <td width="300em">--}}
-{{--                    <strong class="h3">{{ $vehicle->make }} {{ $vehicle->model }}</strong><br>--}}
-{{--                    <em>{{ $vehicle->carType->name }}</em><br>--}}
-{{--                    Automatic Transmission<br>--}}
-{{--                    @if($vehicle->availability == 1)--}}
-{{--                        <p class="card-text">Status: Available</p>--}}
-{{--                    @else--}}
-{{--                        <p class="card-text">Status: Not Available</p>--}}
-{{--                    @endif--}}
-{{--                    <a href="#">View Vehicle Information</a>--}}
-{{--                </td>--}}
-{{--                <!--Retrieve Price Details-->--}}
-{{--                <td width="300em">--}}
-{{--                    Price per Day: {{ $vehicle->base_price_per_day }}<br>--}}
-{{--                    <a class="button_table btn btn-primary" href="/sessions/vehicleReservation" name="select">SELECT</a>--}}
-{{--                </td>--}}
-{{--            </tr>--}}
-{{--        @endforeach--}}
-{{--    </tbody>--}}
-{{--</table>--}}
 @endsection
