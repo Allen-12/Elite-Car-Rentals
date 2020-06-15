@@ -1,5 +1,6 @@
+@extends('layouts.user')
 
-
+@section('content')
     {{--    <!--Multifrom Navigation Section Here-->--}}
     {{--    <div id="container">--}}
     {{--      <div class="d-flex justify-content-between">--}}
@@ -16,7 +17,7 @@
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="text-muted">Location: {{ $sessionData['pickUpCounty'] }}</small><br>
+                        <small class="text-muted">Location: {{ $sessionData['pickUpCounty'] }} , {{$sessionData['pickUpCountyLocation']}}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
                         <em class="text-muted">Date: {{ $sessionData['pickUpDate'] }}</em><br>
                         <em class="text-muted">Time: {{ $sessionData['pickUpTime'] }}</em>
@@ -26,7 +27,7 @@
                 <div class="col-lg-2 d-flex" style="text-align: right">
                     <p><strong class="h5">Drop Off</strong><br>
                         <!--Retrieve Drop Off-->
-                        <small>Location: {{ $sessionData['dropOffCounty'] }}</small> <br>
+                        <small>Location: {{ $sessionData['dropOffCounty'] }} , {{$sessionData['dropOffCountyLocation']}}</small> <br>
                         <!--Retrieve Drop Off Day and Time-->
                         <em class="text-muted">Date: {{ $sessionData['dropOffDate'] }}</em><br>
                         <em class="text-muted">Time: {{ $sessionData['dropOffTime'] }}</em>
@@ -100,3 +101,4 @@
 {{--        @endforeach--}}
 {{--    </tbody>--}}
 {{--</table>--}}
+@endsection
