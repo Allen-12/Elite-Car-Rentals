@@ -1,9 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
+
     <div class="card">
-        <div class="card-header">Add New Car Type</div>
-        <div class="card-body">
+        <div class="card-header text-center " style="background-color:rgba(243, 133, 7, 0.514)"><h2>Add New Car Type</h2></div>
+        <div class="card-body view overlay" >
+            
+                
+                    
             <form method="POST" action="/admin/cartypes">
                 @csrf
 
@@ -40,4 +44,7 @@
             </table>
         </div>
     </div>
+            
+        
+    
 @endsection
