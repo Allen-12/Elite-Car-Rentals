@@ -17,7 +17,7 @@
                             <p class="card-text">Status: Not Available</p>
                         @endif
                         <div class="card-footer align-content-center">
-                            <a href="/admin/cardescriptions/{{ $vehicle->id }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="/admin/cardescriptions/{{ $vehicle->id }}/edit"  style="background-color:orange; border-color:orange; " class=" btn btn-raised btn-rounded z-depth-1 btn-warning">Edit</a>
                         </div>
                     </div>
                 </div>

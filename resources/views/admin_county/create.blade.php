@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">Add New County</div>
+        <div class="card-header text-center " style="background-color:rgba(243, 133, 7, 0.514)"><h2>Add New County</h2></div>
         <div class="card-body">
             <form method="POST" action="/admin/counties">
                 @csrf
@@ -33,7 +33,7 @@
                         <tr>
                             <td>{{$county->id}}</td>
                             <td>{{$county->county_name}}</td>
-                            <td><a href="/admin/cartypes/{{ $county->id }}/edit" class="btn btn-warning">Edit</a></td>
+                            <td><a href="/admin/cartypes/{{ $county->id }}/edit" style="background-color:orange; border-color:orange; " class=" btn btn-raised btn-rounded z-depth-1 btn-warning">Edit</a></td>
                         </tr>
                     @endforeach
                 </tbody>
