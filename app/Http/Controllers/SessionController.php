@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CarDescription;
 use Illuminate\Http\Request;
 
 class SessionController extends Controller
@@ -31,8 +32,11 @@ class SessionController extends Controller
         return redirect('/bookings');
 	}
 
-    public function storeVehicles()
+    public function storeVehicles(CarDescription $carDescription)
     {
-
+        $carDescription->load('carType');
+        \request()->session()->put('vehicleSelected', $carDescription);
+        return redirect('/bookings/summary');
+//        dd(session()->all());
 	}
 }
