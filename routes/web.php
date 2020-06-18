@@ -18,6 +18,7 @@ Route::get('countyLocations/{countyName}','HomeController@getCountyLocations');
 
 // Booking Routes
 Route::get('/bookings','BookingController@index');
+Route::get('/summary','BookingController@summary');
 
 // Session Routes
 Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');

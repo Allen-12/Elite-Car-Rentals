@@ -1,19 +1,20 @@
 @extends('layouts.user')
 
 @section('content')
-    {{--    <!--Multifrom Navigation Section Here-->--}}
-    {{--    <div id="container">--}}
-    {{--      <div class="d-flex justify-content-between">--}}
-    {{--        <button class="test_section btn btn-primary" type="button" name="button">Step 1</button>--}}
-    {{--        <button class="test_section btn btn-warning" type="button" name="button">Step 2</button>--}}
-    {{--        <button class="test_section btn btn-danger" type="button" name="button">Step 3</button>--}}
-    {{--        <button class="test_section btn btn-info" type="button" name="button">Step 4</button>--}}
-    {{--      </div>--}}
-    {{--    </div>--}}
-
-
-  <!--Multifrom Navigation Section Here-->
-
+<style media="screen">
+  body{
+    background-color: #000000;
+  }
+</style>
+{{--    <!--Multifrom Navigation Section Here-->--}}
+{{--    <div id="container">--}}
+{{--      <div class="d-flex justify-content-between">--}}
+{{--      <a type="button" href="/" class="test_section btn btn-primary" type="button" name="button">Step 1</a>--}}
+{{--      <a type="button" href="/booking" class="test_section btn btn-warning" type="button" name="button">Step 2</a>--}}
+{{--      <a type="button" href="/summary" class="test_section btn btn-danger" type="button" name="button">Step 3</a>--}}
+{{--      <a type="button" href="email_demo" class="test_section btn btn-info" type="button" name="button" disabled>Step 4</a>--}}
+{{--      </div>--}}
+{{--    </div>--}}
 <div class="container-fluid">
           <!--SUMMARY OF CURRENT BOOKING IS SHOWN HERE-->
         <div class="mt-3" style="color:white;">
