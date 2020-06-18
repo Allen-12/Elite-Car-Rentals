@@ -29,4 +29,9 @@ class BookingController extends Controller
 //        dd($locations['dropOffCounty'][0]->county_name);
         return view('booking.index',compact('vehicles','sessionData','locations'));
     }
+
+    public function summary()
+    {
+        return "Summary view to be loaded here";
+    }
 }

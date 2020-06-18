@@ -304,7 +304,10 @@
         });
     });
 
-	$('#pickUpTime,#dropOffTime').timepicker();
+	$('#pickUpTime,#dropOffTime').timepicker({
+        minTime:'8:00am',
+        maxTime:'6:00pm'
+    });
 
 	let pickUpURL = "/";
     let dropOffURL = "/";
