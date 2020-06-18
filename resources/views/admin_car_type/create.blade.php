@@ -37,7 +37,7 @@
                         <tr>
                             <td>{{$carType->id}}</td>
                             <td>{{$carType->name}}</td>
-                            <td><a href="/admin/cartypes/{{ $carType->id }}/edit" class="btn btn-warning">Edit</a></td>
+                            <td><a href="/admin/cartypes/{{ $carType->id }}/edit" style="background-color:orange; border-color:orange; " class=" btn btn-raised btn-rounded z-depth-1 btn-warning">Edit</a></td>
                         </tr>
                     @endforeach
                 </tbody>

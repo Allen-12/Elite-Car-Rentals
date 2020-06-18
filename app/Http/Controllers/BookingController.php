@@ -31,6 +31,6 @@ class BookingController extends Controller
     }
     public function summary()
     {
-      return view('booking.summary')
+      return view('booking.summary');
     }
 }

@@ -46,8 +46,8 @@
         <div class="row">
             @foreach($vehicles as $vehicle)
                 <div class="col-md-6 col-lg-4">
-                    <a href="#" style="color: inherit">
-                        <div class="card" style="width: 25rem ;margin-bottom: 20px; background-color:#D0D0D0;">
+                    <a href="/sessions/bookings/{{ $vehicle->id }}" style="color: inherit">
+                        <div class="card" style="width: 25rem ;margin-bottom: 20px">
                             <img class="card-img-top" src="{{ asset('storage/'.$vehicle->image) }}" alt="Card image cap" style="height: 200px">
                             <div class="card-body">
                                 <h5 class="card-title"><strong>{{ $vehicle->make }} {{ $vehicle->model }}</strong> </h5>

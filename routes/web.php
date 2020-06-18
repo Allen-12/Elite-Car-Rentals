@@ -18,11 +18,11 @@ Route::get('countyLocations/{countyName}','HomeController@getCountyLocations');
 
 // Booking Routes
 Route::get('/bookings','BookingController@index');
-Route::get('/summary','BookingController@summary');
+Route::get('/bookings/summary','BookingController@summary');
 
 // Session Routes
 Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
-Route::get('/sessions/vehicleReservation','SessionController@storeVehicles');
+Route::get('/sessions/bookings/{carDescription}','SessionController@storeVehicles');
 
 
 // Elite Administrator Routes
