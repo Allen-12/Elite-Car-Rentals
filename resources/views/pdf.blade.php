@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Elite-Car-Rentals</title>
-    
-    <!--<link rel="stylesheet" href="style.css" media="all" />-->
+
+    <style>
+
+  .logo-postioner
+  {
+  margin: auto;
+  width: 50%;
+  /*border: 3px solid green;*/
+  padding: 10px;
+  }
 
     <link media="all" href="{{ asset('css/style1.css') }}" rel="stylesheet">
 
@@ -19,10 +27,11 @@
     </style>
   </head>
   <body>
-    <form> 
-        <input type="button" value="Print" 
-               onclick="window.print()" /> 
-    </form> 
+
+  <div class="logo-positioner" style="margin: auto; width: 13%;">
+    <img src = "images/elitelogo2.png" style="height: 100px; width: 100px;" ></a>
+  </div>
+
 
     <header class="clearfix">
       <div id="logo">

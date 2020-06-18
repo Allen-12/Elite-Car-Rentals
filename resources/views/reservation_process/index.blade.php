@@ -39,14 +39,17 @@
         </style>
 </head>
 
-<body class="">
-<!--Navbar Here-->
-      <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand">{{ config('app.name') }}</a>
+<body>
+<!--Navbar Here
+    <nav class="navbar navbar-dark bg-dark">
+            <a href="/."class="navbar-brand">{{ config('app.name') }}</a>
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Log In</a>
         </div>
       </nav>
+
+-->
+
 
 <!--Multifrom Navigation Section Here-->
 <div id="container">
@@ -101,14 +104,14 @@
                 <td width="300em" height="150em"><img class="img-fluid"  src="{{ asset('storage/'.$vehicle->image) }}" alt=""></td>
                 <!--Retrieve Vehicle Details-->
                 <td width="300em">
-                    <strong class="h3">{{ $vehicle->make }} {{ $vehicle->model }}</strong><br>
+                    <strong class="h3" >{{ $vehicle->make }} {{ $vehicle->model }}</strong><br>
                     <em>{{ $vehicle->carType->name }}</em><br>
                     Automatic Transmission<br>
                     <a href="#">View Vehicle Information</a>
                 </td>
                 <!--Retrieve Price Details-->
                 <td width="300em">
-                    {{ $vehicle->base_price_per_day  }}<br>
+                <strong> <em> Kshs  {{ $vehicle->base_price_per_day  }} </strong><br> <br>
                     <button class="button_table btn btn-primary" type="button" name="select">SELECT</button>
                 </td>
             </tr>

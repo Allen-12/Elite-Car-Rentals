@@ -26,45 +26,83 @@
 
                         <h2>Make your trip</h2>
                         <div class="d-flex">
-                            <div class="form-group mr-2">
-                                <label for="pickup_location" class="label">County</label>
-                                <input name="pickup_location" type="text" class="form-control" placeholder="County">
+                            <div class="form-group mr-3">
+                                <label for="countiesPickUp" class="label">County for pickup</label>
+                                <select class="form-control" id="countiesPickUp" name="countiesPickUp">
+                                    <option>Select a county</option>
+                                    @foreach($counties as $id => $county)
+                                        <option class="dropdown-item" value="{{ $id }}">{{ $county }}</option>
+                                    @endforeach
+                                </select>
+                                @error('countiesPickUp')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
-{{--                                <div class="dropdown">--}}
-{{--                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                                        Available Counties--}}
-{{--                                    </button>--}}
-{{--                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
-{{--                                        @foreach($counties as $county)--}}
-{{--                                            <p class="dropdown-item">{{ $county->county_name }}<p>--}}
-{{--                                        @endforeach--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
+                            <div class="form-group">
+                                <label for="countyLocationsPickUp" class="label">Pick-Up Location</label>
+                                <select class="form-control" id="countyLocationsPickUp" name="countyLocationsPickup">
+                                    <option></option>
+                                </select>
+                                @error('countyLocationsPickup')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
                         </div>
                         <div class="d-flex">
                             <div class="form-group mr-2">
                                 <label for="pickup_date" class="label">Pick-up date</label>
-                                <input type="text" name="pickup_date" class="form-control" id="pickUpDate" autocomplete="off" placeholder="Date">
+                                <input type="text" name="pickup_date" class="form-control" id="pickUpDate" value="{{ old('pickup_date') }}" autocomplete="off" placeholder="Date">
+                                @error('pickup_date')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="pickup_time" class="label">Pick-up time</label>
-                                <input type="text" name="pickup_time" class="form-control" id="pickUpTime" placeholder="Time">
+                                <input type="text" name="pickup_time" class="form-control" id="pickUpTime" value="{{ old('pickup_time') }}" placeholder="Time">
+                                @error('pickup_time')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="drop_off_location" class="label">Drop-off location</label>
-                            <input type="text" name="drop_off_location" class="form-control" placeholder="City, Airport, Station, etc">
+                        <div class="d-flex">
+                            <div class="form-group mr-4">
+                                <label for="countiesDropOff" class="label">County for drop-off</label>
+                                <select class="form-control" id="countiesDropOff" name="countiesDropOff">
+                                    <option>Select a County</option>
+                                    @foreach($counties as $id => $county)
+                                        <option class="dropdown-item" value="{{ $id }}">{{ $county }}</option>
+                                    @endforeach
+                                </select>
+                                @error('countiesDropOff')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="countyLocationsDropOff" class="label">Drop-off Location</label>
+                                <select class="form-control" id="countyLocationsDropOff" name="countyLocationsDropOff">
+                                    <option></option>
+                                </select>
+                                @error('countyLocationsDropOff')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="d-flex">
-                            <div class="form-group ml-2">
+                            <div class="form-group mr-2">
                                 <label for="drop_off_date" class="label">Drop-off date</label>
-                                <input type="text" name="drop_off_date" class="form-control" id="dropOffDate" autocomplete="off" placeholder="Date">
+                                <input type="text" name="drop_off_date" class="form-control" id="dropOffDate" value="{{ old('drop_off_date') }}" autocomplete="off" placeholder="Date">
+                                @error('drop_off_date')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="drop_off_time" class="label">Drop-off time</label>
-                                <input type="text" name="drop_off_time" class="form-control" id="dropOffTime" placeholder="Time">
+                                <input type="text" name="drop_off_time" class="form-control" id="dropOffTime" value="{{ old('drop_off_time') }}" placeholder="Time">
+                                @error('drop_off_time')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group">

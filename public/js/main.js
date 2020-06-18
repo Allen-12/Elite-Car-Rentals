@@ -304,7 +304,60 @@
         });
     });
 
-	$('#pickUpTime,#dropOffTime').timepicker();
+	$('#pickUpTime,#dropOffTime').timepicker({
+        minTime: '8:00am',
+        maxTime: '6:00pm'
+    });
 
+	let pickUpURL = "/";
+    let dropOffURL = "/";
+    console.log(pickUpURL);
+
+    // Populating the county location dropdown based on the county selected
+	$('#countiesPickUp').on('change',function (){
+	    $('#countyLocationsPickUp').empty();
+	    let pickUpID = $('#countiesPickUp').val();
+	    console.log(pickUpID);
+	    $('#countyLocationsPickUp').html('<option selected="selected" value="">Loading...</option>');
+	    pickUpURL = pickUpURL + 'countyLocations/' + pickUpID;
+	    console.log(pickUpURL);
+	    $.ajax({
+            url:pickUpURL,
+            type: "GET",
+            dataType:"json",
+            success: function (data) {
+                console.log(data);
+                $('#countyLocationsPickUp').html('<option selected="selected" value="">Select a specific location for pickup</option>');
+                $.each(data,function (key,value) {
+                    $('#countyLocationsPickUp').append('<option value="'+key+'">'+value+'</option>');
+                });
+                pickUpURL = "/";
+                console.log(pickUpURL);
+            }
+        });
+    });
+
+    $('#countiesDropOff').on('change',function (){
+        $('#countyLocationsDropOff').empty();
+        let dropOffID = $('#countiesDropOff').val();
+        console.log(dropOffID);
+        $('#countyLocationsDropOff').html('<option selected="selected" value="">Loading...</option>');
+        dropOffURL = dropOffURL + 'countyLocations/' + dropOffID;
+        console.log(dropOffURL);
+        $.ajax({
+            url:dropOffURL,
+            type: "GET",
+            dataType:"json",
+            success: function (data) {
+                console.log(data);
+                $('#countyLocationsDropOff').html('<option selected="selected" value="">Select a specific location for drop-off</option>');
+                $.each(data,function (key,value) {
+                    $('#countyLocationsDropOff').append('<option value="'+key+'">'+value+'</option>');
+                });
+                dropOffURL = "/";
+                console.log(dropOffURL);
+            }
+        });
+    });
 })(jQuery);
 

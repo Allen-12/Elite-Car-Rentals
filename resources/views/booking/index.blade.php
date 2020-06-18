@@ -1,11 +1,15 @@
 @extends('layouts.user')
 
 @section('content')
-
-
-
-
-        <!--Navbar Here-->
+    {{--    <!--Multifrom Navigation Section Here-->--}}
+    {{--    <div id="container">--}}
+    {{--      <div class="d-flex justify-content-between">--}}
+    {{--        <button class="test_section btn btn-primary" type="button" name="button">Step 1</button>--}}
+    {{--        <button class="test_section btn btn-warning" type="button" name="button">Step 2</button>--}}
+    {{--        <button class="test_section btn btn-danger" type="button" name="button">Step 3</button>--}}
+    {{--        <button class="test_section btn btn-info" type="button" name="button">Step 4</button>--}}
+    {{--      </div>--}}
+    {{--    </div>--}}
 
 
   <!--Multifrom Navigation Section Here-->
@@ -15,19 +19,21 @@
         <div class="mt-3" style="color:white;">
             <div class="row">
                 <div class="col-lg-10">
-                    <p><strong class="h5">Pick Up</strong><br>
+                    <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="">Location: {{ $sessionData['pickUpLocation'] }}</small><br>
+                        <small class="text-muted">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
+                        <small class="text-muted">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
                         <em class="">Date: {{ $sessionData['pickUpDate'] }}</em><br>
                         <em class="">Time: {{ $sessionData['pickUpTime'] }}</em>
                     </p>
                 </div>
 
-                <div class="col-lg-2 d-flex" style="text-align: right;">
-                    <p><strong class="h5">Drop Off</strong><br>
+                <div class="col-lg-2 d-flex" style="text-align: right">
+                    <p><strong class="h5">Drop Off Details</strong><br>
                         <!--Retrieve Drop Off-->
-                        <small>Location: {{ $sessionData['dropOffLocation'] }}</small> <br>
+                        <small class="text-muted">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
+                        <small class="text-muted">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Drop Off Day and Time-->
                         <em class="">Date: {{ $sessionData['dropOffDate'] }}</em><br>
                         <em class="">Time: {{ $sessionData['dropOffTime'] }}</em>
