@@ -37,9 +37,9 @@ class BookingController extends Controller
       $pickUpCountyLocation = CountyLocation::where('id',$sessionData['pickUpCountyLocation'])->get();
       $dropOffCounty = County::where('id',$sessionData['dropOffCounty'])->get();
       $dropOffLocation = CountyLocation::where('id',$sessionData['dropOffCountyLocation'])->get();
-      //$date1= Carbon::parse($sessionData['pickUpDate']);
-    //  $date2=  Carbon::parse($sessionData['pickUpDate']);
-    //  $date_diff = $date1->diffInDays($date2);
+      $date1= Carbon::parse($sessionData['pickUpDate']);
+      $date2=  Carbon::parse($sessionData['dropOffDate']);
+      $date_diff = $date1->diffInDays($date2);
       $locations = array(
           "pickUpCounty" => $pickUpCounty,
           "pickUpCountyLocation" => $pickUpCountyLocation,
@@ -47,6 +47,10 @@ class BookingController extends Controller
           "dropOffCountyLocation" => $dropOffLocation
         );
       $vehicles = json_decode($sessionData['vehicleSelected'], true);
-      return view('booking.summary',compact('vehicles','sessionData','locations'));
+      $total_price= ($vehicles['base_price_per_day']*$date_diff);
+      \request()->session()->put('totalPrice', $total_price);
+      \request()->session()->put('duration', $date_diff);
+      // dd(session()->all());
+      return view('booking.summary',compact('vehicles','sessionData','locations','date_diff','total_price'));
     }
 }

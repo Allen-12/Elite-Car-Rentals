@@ -46,7 +46,7 @@ hr{
 {{--      <a type="button" href="/summary" class="test_section btn btn-danger" type="button" name="button">Step 3</a>--}}
 {{--      <a type="button" href="email_demo" class="test_section btn btn-info" type="button" name="button" disabled>Step 4</a>--}}
 {{--      </div>--}}
-{{--    </div>--}}
+    </div>--}}
 <div class="container">
 <div class="jumbotron mb-0">
   <hr>
@@ -111,20 +111,12 @@ Your rate was calculated based on the information provided. Some modifications m
     </div>
 
     <div class="col-sm-5">
-      <strong>Base Rate/day: <span class="tab"> Kshs {{$vehicles['base_price_per_day']}} </strong>
-        <br><br>
-        <p class="text-justify" style="line-spacing:8px;"><strong>Kilometers: <span class="tab"> 250 Kilometers included, 0.35 USD per additional kilometer</strong>
-          <br>
-          Duration(days):     <br>
-          Rental Options$0.00 <br>
-          Equipment & Services $0.00 <br>
-          None Selected
-          Protections & Coverages $0.00 <br>
-
-          Discount Codes  <br>
-          Coupon: NA <br>
-          AWD: NA <br>
-          Rate Code: 1E
+      <h5><strong>PRICING</strong> </h5>
+      <p>We accept various payment methods</p>
+        <p class="text-justify" style="line-height:3.5em; font-size:1.2em;"><strong>Base Rate/day: <span class="tab"> Kshs {{$vehicles['base_price_per_day']}} </strong>
+        <br>
+      <em> Duration(days): {{$date_diff}} Days </em>   <br>
+      <strong><em>TOTAL FEE:  KES {{$total_price}}</em> </strong>
         </p>
     </div>
   </div>

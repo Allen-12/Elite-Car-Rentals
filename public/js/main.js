@@ -293,12 +293,12 @@
   });
 
 	$('#pickUpDate').datepicker({
-	  'format': 'dd/mm/yyyy',
+	  'format': 'dd-mm-yyyy',
         'startDate': new Date(),
 	  'autoclose': true,
 	}).on('changeDate', function(e){
         $('#dropOffDate').datepicker({
-            'format': 'dd/mm/yyyy',
+            'format': 'dd-mm-yyyy',
             'startDate': e.date,
             'autoclose': true,
         });
@@ -360,4 +360,3 @@
         });
     });
 })(jQuery);
-
