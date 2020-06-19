@@ -13,7 +13,7 @@
 
           <!--SUMMARY OF CURRENT BOOKING IS SHOWN HERE-->
         <div class="mt-3">
-            <div class="row">
+            <div class="row m-0 p-0">
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
@@ -38,11 +38,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row m-0 p-0" style="height: 30rem;">
             @foreach($vehicles as $vehicle)
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" style="height: 30rem;">
                     <a href="/sessions/bookings/{{ $vehicle->id }}" style="color: inherit">
-                        <div class="card" style="width: 25rem ;margin-bottom: 20px">
+                        <div class="card mb-2">
                             <img class="card-img-top" src="{{ asset('storage/'.$vehicle->image) }}" alt="Card image cap" style="height: 200px">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $vehicle->make }} {{ $vehicle->model }}</h5>
