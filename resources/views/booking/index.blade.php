@@ -12,7 +12,7 @@
 {{--      <a type="button" href="/" class="test_section btn btn-primary" type="button" name="button">Step 1</a>--}}
 {{--      <a type="button" href="/booking" class="test_section btn btn-warning" type="button" name="button">Step 2</a>--}}
 {{--      <a type="button" href="/summary" class="test_section btn btn-danger" type="button" name="button">Step 3</a>--}}
-{{--      <a type="button" href="email_demo" class="test_section btn btn-info" type="button" name="button" disabled>Step 4</a>--}}
+{{--      <a type="button" href="/mailpdf" class="test_section btn btn-info" type="button" name="button" disabled>Step 4</a>--}}
 {{--      </div>--}}
 {{--    </div>--}}
 <div class="container-fluid">
@@ -52,6 +52,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><strong>{{ $vehicle->make }} {{ $vehicle->model }}</strong> </h5>
                                 <p class="card-text">{{ $vehicle->carType->name }}</p>
+                                  <p id="vehicleID" hidden >{{$vehicle->id}}</p>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item ">Automatic Transmission</li>

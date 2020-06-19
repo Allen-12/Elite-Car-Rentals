@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\CarDescription;
 use App\County;
 use App\CountyLocation;
@@ -31,6 +32,21 @@ class BookingController extends Controller
     }
     public function summary()
     {
-      return view('booking.summary');
+      $sessionData = session()->all();
+      $pickUpCounty = County::where('id',$sessionData['pickUpCounty'])->get();
+      $pickUpCountyLocation = CountyLocation::where('id',$sessionData['pickUpCountyLocation'])->get();
+      $dropOffCounty = County::where('id',$sessionData['dropOffCounty'])->get();
+      $dropOffLocation = CountyLocation::where('id',$sessionData['dropOffCountyLocation'])->get();
+      //$date1= Carbon::parse($sessionData['pickUpDate']);
+    //  $date2=  Carbon::parse($sessionData['pickUpDate']);
+    //  $date_diff = $date1->diffInDays($date2);
+      $locations = array(
+          "pickUpCounty" => $pickUpCounty,
+          "pickUpCountyLocation" => $pickUpCountyLocation,
+          "dropOffCounty" => $dropOffCounty,
+          "dropOffCountyLocation" => $dropOffLocation
+        );
+      $vehicles = json_decode($sessionData['vehicleSelected'], true);
+      return view('booking.summary',compact('vehicles','sessionData','locations'));
     }
 }
