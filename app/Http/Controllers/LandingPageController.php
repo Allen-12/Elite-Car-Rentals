@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\County;
+use App\CountyLocation;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
 {
-	public function sessionStore()
+    public function index()
     {
-        \request()->session()->put('pickUpLocation', request('pickup_location'));
-        \request()->session()->put('pickUpDate', request('pickup_date'));
-        \request()->session()->put('pickUpTime', request('pickup_time'));
-        \request()->session()->put('dropOffLocation', request('drop_off_location'));
-        \request()->session()->put('dropOffDate', request('drop_off_date'));
-        \request()->session()->put('dropOffTime', request('drop_off_time'));
-        return redirect()->back();
-	}
+//        $counties = County::with('countyLocations')->get();
+        $counties = County::pluck('county_name','id');
+        $countyLocations = [];
+//        dd($counties);
+
+        return view('landing_page.index',compact('counties','countyLocations'));
+    }
+
+    public function getCountyLocations($countyID)
+    {
+//        dd($countyID);
+        $countyLocations = CountyLocation::where('county_id',$countyID)->pluck('name','id');
+        return json_encode($countyLocations);
+    }
 }

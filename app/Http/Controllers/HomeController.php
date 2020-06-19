@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\County;
-use App\CountyLocation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-//        $counties = County::with('countyLocations')->get();
-        $counties = County::pluck('county_name','id');
-        $countyLocations = [];
-//        dd($counties);
-
-        return view('home.index',compact('counties','countyLocations'));
+        $this->middleware('auth');
     }
 
-    public function getCountyLocations($countyID)
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-//        dd($countyID);
-        $countyLocations = CountyLocation::where('county_id',$countyID)->pluck('name','id');
-        return json_encode($countyLocations);
+        return view('home');
     }
 }
