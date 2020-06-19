@@ -3,7 +3,7 @@
 @section('content')
 <style media="screen">
   body{
-    background-color: #000000;
+    /*background-color: #000000;*/
   }
 </style>
 {{--    <!--Multifrom Navigation Section Here-->--}}
@@ -17,26 +17,24 @@
 {{--    </div>--}}
 <div class="container-fluid">
           <!--SUMMARY OF CURRENT BOOKING IS SHOWN HERE-->
-        <div class="mt-3" style="color:white;">
-            <div class="row">
         <div class="mt-3">
             <div class="row m-0 p-0">
                 <div class="col-lg-10">
                     <p><strong class="h5">Pick Up Details</strong><br>
                         <!--Retrieve Pick Up-->
-                        <small class="text-muted">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
-                        <small class="text-muted">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
+                        <small class="">County: {{ $locations['pickUpCounty'][0]->county_name }}</small><br>
+                        <small class="">Location in County: {{ $locations['pickUpCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Pick Up Day and Time-->
-                        <em class="text-muted">Date: {{ $sessionData['pickUpDate'] }}</em><br>
-                        <em class="text-muted">Time: {{ $sessionData['pickUpTime'] }}</em>
+                        <em class="">Date: {{ $sessionData['pickUpDate'] }}</em><br>
+                        <em class="">Time: {{ $sessionData['pickUpTime'] }}</em>
                     </p>
                 </div>
 
                 <div class="col-lg-2 d-flex" style="text-align: right">
                     <p><strong class="h5">Drop Off Details</strong><br>
                         <!--Retrieve Drop Off-->
-                        <small class="text-muted">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
-                        <small class="text-muted">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
+                        <small class="">County: {{ $locations['dropOffCounty'][0]->county_name }}</small><br>
+                        <small class="">Location in County: {{ $locations['dropOffCountyLocation'][0]->name }}</small><br>
                         <!--Retrieve Drop Off Day and Time-->
                         <em class="">Date: {{ $sessionData['dropOffDate'] }}</em><br>
                         <em class="">Time: {{ $sessionData['dropOffTime'] }}</em>
@@ -54,11 +52,11 @@
                             <div class="card-body">
                                 <h5 class="card-title"><strong>{{ $vehicle->make }} {{ $vehicle->model }}</strong> </h5>
                                 <p class="card-text">{{ $vehicle->carType->name }}</p>
-                                  <p id="vehicleID" hidden >{{$vehicle->id}}</p>
+{{--                                  <p id="vehicleID" hidden >{{$vehicle->id}}</p>--}}
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item ">Automatic Transmission</li>
-                                  <li class="list-group-item">Price per Day: KES {{ $vehicle->base_price_per_day }}</li>
+                                <li class="list-group-item">Price per Day: KES {{ $vehicle->base_price_per_day }}</li>
                                 @if($vehicle->availability == 1)
                                     <li class="list-group-item">Status: Available</li>
                                 @else
