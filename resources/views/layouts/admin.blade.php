@@ -10,7 +10,7 @@
         <title>{{ config('app.name') }}</title>
     </head>
 
-    <body style="background-color:#000000;">
+    <body >
         <div id="app">
             <nav class="navbar navbar-expand-md navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="background-image: url('{{ asset('images/car1.jpg') }}">
                 <div class="container">
@@ -21,8 +21,8 @@
 
                     <div class="collapse navbar-collapse" id="ftco-nav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a href="/admin" class="nav-link"><h4>Home</h4></a></li>
-                            <li class="nav-item"><a href="/" class="nav-link"><h4>Log Out</h4></a></li>
+                            <li class="nav-item active"><a href="/admin" class="nav-link"><h5>Home</h5></a></li>
+                            <li class="nav-item"><a href="/" class="nav-link"><h5>Log Out</h5></a></li>
                         </ul>
                     </div>
                 </div>

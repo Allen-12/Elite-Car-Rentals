@@ -1,8 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
+
     <div class="card">
-        <div class="card-header">Add New Location for {{ $county->county_name }}</div>
+        <div class= "card-header text-center " style="background-color:rgba(243, 133, 7, 0.514)"><h2>Add New Location for {{ $county->county_name }}</h2></div>
         <div class="card-body">
             <form method="POST" action="/admin/counties/{{ $county->id }}/countylocations">
                 @csrf
