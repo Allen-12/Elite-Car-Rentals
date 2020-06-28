@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('content')
-    <style media="screen">
+    <style >
         body{
             /*background-color: ;*/
         }
@@ -80,16 +80,8 @@
                     <div class="row">
                         <div class="col-sm-6 mb-3">
                             <strong>{{ $vehicles['make'] }}  {{  $vehicles['model'] }}</strong><br>
-                            @if($vehicles['car_type_id']== 1)
-                                <em>Saloon</em> <br>
-                            @elseif($vehicles['car_type_id']== 2)
-                                <em>Sedan</em> <br>
-                            @elseif($vehicles['car_type_id']== 3)
-                                <em>SUV</em> <br>
-                            @else
-                                <em>Pickup Truck</em> <br>
-                            @endif
-                            <em>{{$vehicles['number_plate'] }}</em> <br>
+                            <em>{{ $vehicles['car_type']['name'] }}</em> <br>
+                            <em>Number Plate: {{$vehicles['number_plate'] }}</em> <br>
                             Automatic Transmission
                         </div>
                         <div class="col-md-6 mb-3">
@@ -115,18 +107,13 @@
                     <p>We accept various payment methods</p>
                     <p class="text-justify" style="line-height:3.5em; font-size:1.2em;"><strong>Base Rate/day: <span class="tab"> Kshs {{$vehicles['base_price_per_day']}} </strong>
                         <br>
-                        <em> Duration(days): {{$date_diff}} Days </em>   <br>
+                        <em> Duration(in days): {{$date_diff}} Days </em>   <br>
                         <strong><em>TOTAL FEE:  KES {{$total_price}}</em> </strong>
                     </p>
+                    <a class="btn btn-warning" href="/bookings/completeBooking">COMPLETE BOOKING</a>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
     </body>
 @endsection

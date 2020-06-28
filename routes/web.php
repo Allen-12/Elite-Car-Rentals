@@ -20,6 +20,7 @@ Route::get('countyLocations/{countyName}','LandingPageController@getCountyLocati
 // Booking Routes
 Route::get('/bookings','BookingController@index');
 Route::get('/bookings/summary','BookingController@summary');
+Route::get('/bookings/completeBooking','BookingController@completeBooking')->middleware('auth');
 
 // Session Routes
 Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');

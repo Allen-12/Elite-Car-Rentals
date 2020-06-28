@@ -123,7 +123,8 @@
                         <div class="row">
                             <div class="col">
                                 <div class="mx-auto w-50 p-3  text-center">
-                                    <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">
+{{--                                    <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">--}}
+                                    <a class="btn btn-primary py-3 px-4" href="/">Search for a Vehicle</a>
                                 </div>
                             </div>
                         </div>

@@ -292,9 +292,13 @@
     fixedContentPos: false
   });
 
+    var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(today.getDate()+1);
+    console.log(tomorrow);
 	$('#pickUpDate').datepicker({
 	  'format': 'dd-mm-yyyy',
-        'startDate': new Date(),
+        'startDate': tomorrow,
 	  'autoclose': true,
 	}).on('changeDate', function(e){
         $('#dropOffDate').datepicker({

@@ -25,18 +25,22 @@ use PDF;
 
 class BillingPDF extends Controller
 {
-	public function attachment_email() {
+	public function attachment_email()
+    {
       $data = array('name'=>"Elite Car Rentals");
       $pdf = PDF::loadView('mails.mymail',$data);
 
-      Mail::send('mail', $data, function($message) use($pdf){
-         $message->to('nkirote.mutabari@gmail.com', 'Peter Pan')->subject
-            ('Invoice - Elite Car Rentals ');
-     
-         $message->attachData($pdf->output(),"Invoice.pdf");
+      return view('mails.mymail');
 
-         $message->from('babygirllove396@gmail.com','Elite Car Rentals');
-      });
-      echo "Email Sent with attachment. Check your inbox.";
+//      Mail::send('mail', $data, function($message) use($pdf)
+//      {
+//         $message->to('nkirote.mutabari@gmail.com', 'Peter Pan')->subject
+//            ('Invoice - Elite Car Rentals ');
+//
+//         $message->attachData($pdf->output(),"Invoice.pdf");
+//
+//         $message->from('babygirllove396@gmail.com','Elite Car Rentals');
+//      });
+//      echo "Email Sent with attachment. Check your inbox.";
    }
 }
