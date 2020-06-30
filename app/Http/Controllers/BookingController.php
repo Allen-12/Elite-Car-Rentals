@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
 use Carbon\Carbon;
 use App\CarDescription;
 use App\County;
 use App\CountyLocation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class BookingController extends Controller
 {
@@ -67,6 +70,44 @@ class BookingController extends Controller
 
     public function completeBooking()
     {
+        if(Auth::check())
+        {
+            $pickUpDate = \request()->session()->get('pickUpDate');
+            $pickUpDateConverted = date("Y-m-d", strtotime($pickUpDate));
+            $dropOffDate = \request()->session()->get('dropOffDate');
+            $dropOffDateConverted = date("Y-m-d", strtotime($dropOffDate));
+            $vehicleSelected = \request()->session()->get('vehicleSelected');
+
+            $data = [
+                "user_id" => Auth::id(),
+                "car_description_id" => $vehicleSelected->id,
+                "pickup_location" => \request()->session()->get('pickUpCountyLocation'),
+                "pickup_date" => date("Y-m-d", strtotime($pickUpDate)),
+                "pickup_time" => \request()->session()->get('pickUpTime'),
+                "drop_off_location" => \request()->session()->get('dropOffCountyLocation'),
+                "drop_off_date" => date("Y-m-d", strtotime($dropOffDate)),
+                "drop_off_time" => \request()->session()->get('dropOffTime'),
+                "total_cost" => \request()->session()->get('totalPrice')
+            ];
+
+            $bookings = Booking::where('car_description_id',$vehicleSelected->id)->get();
+            $booked = false;
+            foreach ($bookings as $booking)
+            {
+                if ($booking->pickup_date == $pickUpDateConverted || $booking->drop_off_date == $dropOffDateConverted)
+                {
+                    $booked = true;
+                    return redirect()->action('LandingPageController@index')->with('status','Invalid Booking! Please pick a different pickup date and drop off date');
+//                    dd($booked);
+                }
+            }
+
+            if($booked == false)
+            {
+//                dd($booked);
+                Booking::create($data);
+            }
+        }
         return view('mails.mymail');
     }
 }

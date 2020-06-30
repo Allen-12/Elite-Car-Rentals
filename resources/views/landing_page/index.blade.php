@@ -55,6 +55,11 @@
                                 @error('pickup_date')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
+                                @if (session('status'))
+                                    <div class="alert alert-danger">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label for="pickup_time" class="label">Pick-up time</label>

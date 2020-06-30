@@ -13,8 +13,8 @@ class CarDescription extends Model
         return $this->belongsTo(CarType::class);
     }
 
-    public function booking()
+    public function bookings()
     {
-        return $this->hasOne(Booking::class);
+        return $this->hasMany(Booking::class);
     }
 }

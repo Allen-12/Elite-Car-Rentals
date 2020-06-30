@@ -19,10 +19,10 @@ class CreateBookingsTable extends Migration
             $table->unsignedBigInteger('car_description_id');
             $table->string('pickup_location');
             $table->date('pickup_date');
-            $table->time('pickup_time');
+            $table->string('pickup_time');
             $table->string('drop_off_location');
             $table->date('drop_off_date');
-            $table->time('drop_off_time');
+            $table->string('drop_off_time');
             $table->unsignedBigInteger('total_cost');
             $table->timestamps();
         });
