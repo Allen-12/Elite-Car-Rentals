@@ -60,6 +60,11 @@ Route::get('/mailpdf','BillingPDF@attachment_email');
 
 // email_page is the route name i'm giving the view, let's see if it will work
 
+Route::get('/about', function (){
+    return view('about.about');
+});
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');

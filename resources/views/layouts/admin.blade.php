@@ -21,8 +21,28 @@
 
                     <div class="collapse navbar-collapse" id="ftco-nav">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active"><a href="/admin" class="nav-link"><h5>Home</h5></a></li>
-                            <li class="nav-item"><a href="/" class="nav-link"><h5>Log Out</h5></a></li>
+                            <li class="nav-item active"><a href="/admin" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                            
+                            @guest
+                                <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log In</a></li>
+                            @else 
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link">{{Auth::user()->first_name}} {{ Auth::user()->last_name }}</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                            {{-- <li class="nav-item"><a href="/" class="nav-link"><h5>Log Out</h5></a></li> --}}
                         </ul>
                     </div>
                 </div>
