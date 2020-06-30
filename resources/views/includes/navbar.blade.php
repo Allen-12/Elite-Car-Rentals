@@ -10,7 +10,24 @@
                 <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log In</a></li>
+                @guest
+                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log In</a></li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">{{Auth::user()->first_name}} {{ Auth::user()->last_name }}</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>
