@@ -19,10 +19,11 @@ use Mail;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 use App;
 use PDF;
-
+use App\User;
 class BillingPDF extends Controller
 {
 	public function attachment_email()
@@ -30,17 +31,18 @@ class BillingPDF extends Controller
       $data = array('name'=>"Elite Car Rentals");
       $pdf = PDF::loadView('mails.mymail',$data);
 
-      return view('mails.mymail');
+    
 
-//      Mail::send('mail', $data, function($message) use($pdf)
-//      {
-//         $message->to('nkirote.mutabari@gmail.com', 'Peter Pan')->subject
-//            ('Invoice - Elite Car Rentals ');
-//
-//         $message->attachData($pdf->output(),"Invoice.pdf");
-//
-//         $message->from('babygirllove396@gmail.com','Elite Car Rentals');
-//      });
-//      echo "Email Sent with attachment. Check your inbox.";
+     Mail::send('mail', $data, function($message) use($pdf)
+     {
+        $message->to(Auth::user()->email, Auth::user()->last_name)->subject
+           ('Invoice - Elite Car Rentals ');
+
+        $message->attachData($pdf->output(),"Invoice.pdf");
+
+        $message->from('elitecarrentals.2020@gmail.com','Elite Car Rentals');
+     });
+     
+       return view('mails.response');
    }
 }

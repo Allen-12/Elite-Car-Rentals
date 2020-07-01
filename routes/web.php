@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/emailpdf','BillingPDF@attachment_email');
 Route::get('/', 'LandingPageController@index');
 Route::get('countyLocations/{countyName}','LandingPageController@getCountyLocations');
 

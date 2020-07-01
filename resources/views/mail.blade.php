@@ -7,10 +7,9 @@
 	</head>
 
 	<body>
-		<h1>Hi, {{ $name }}</h1>
-		<p>Please find attached your invoice for the service purchased.</p><br><br>
+		<h1>Hello,</h1>
+		<p>Please find attached your invoice for the vehicle you have booked.</p><br>
 
-		<p>Thank you for working with us.</p>
 		<p>Regards,</p>
 		<h3>Elite Car Rentals</h3>
 	</body>
