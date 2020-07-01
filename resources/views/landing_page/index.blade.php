@@ -48,6 +48,12 @@
                                 @enderror
                             </div>
                         </div>
+{{--                        <div class="d-flex">--}}
+{{--                            <div class="form-check">--}}
+{{--                                <input type="checkbox" value="FALSE" class="form-check-input" id="sameDropOffLocation">--}}
+{{--                                <label class="form-check-label" for="sameDropOffLocation">Similar Drop-Off Location</label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="d-flex">
                             <div class="form-group mr-2">
                                 <label for="pickup_date" class="label">Pick-up date</label>
