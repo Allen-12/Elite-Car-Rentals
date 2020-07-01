@@ -16,7 +16,7 @@
                         @if($vehicle->availability == 1)
                             <p class="card-text ">Status: Available</p>
                         @else
-                        <p class="card-text">Status:<strong> Not Available</p></strong> 
+                        <p class="card-text">Status:<strong> Not Available</strong></p>
                         @endif
                         <div class="card-footer align-content-center">
                             <a href="/admin/cardescriptions/{{ $vehicle->id }}/edit"  style="background-color:orange; border-color:orange; " class=" btn btn-raised btn-rounded z-depth-1 btn-warning">Edit</a>
