@@ -17,8 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/emailpdf','BillingPDF@attachment_email');
 Route::get('/', 'LandingPageController@index');
 Route::get('countyLocations/{countyName}','LandingPageController@getCountyLocations');
-Route::get('sameDropOffLocation/{pickUpCountyID}', 'LandingPageController@sameDropOffLocationCounty');
-Route::get('sameDropOffLocation/{pickUpCountyLocationID}', 'LandingPageController@sameDropOffLocationCountyLocation');
 
 // Booking Routes
 Route::get('/bookings','BookingController@index');
@@ -71,3 +69,4 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/summary/data','BillingPDF@getData');

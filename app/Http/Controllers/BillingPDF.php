@@ -20,6 +20,7 @@ use Mail;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 use App;
 use PDF;
@@ -28,10 +29,18 @@ class BillingPDF extends Controller
 {
 	public function attachment_email()
     {
+      $sessionData = session()->all();
       $data = array('name'=>"Elite Car Rentals");
       $pdf = PDF::loadView('mails.mymail',$data);
 
-    
+      $userData = Auth::user()->all();
+
+      var_dump($userData);
+
+      echo "<br>";
+      echo "<br>";
+
+      var_dump(Auth::user()->email);
 
      Mail::send('mail', $data, function($message) use($pdf)
      {
@@ -43,6 +52,41 @@ class BillingPDF extends Controller
         $message->from('elitecarrentals.2020@gmail.com','Elite Car Rentals');
      });
      
-       return view('mails.response');
+       // return $pdf->stream();
    }
+
+   public function getData(Request $request)
+   {
+     # code...
+
+      $response = $request->pickDate;
+
+      $tot = $request->total;
+      $days = $request->days;
+      $desc= $request->desc;
+      $dropDate = $request->dropDate;
+      $dropLocation = $request->dropOffLocation;
+      $pickUpLocation=$request->pickUpLocation;
+      $basePrice = $tot/$days;
+      $service = 1500;
+      $g_total = $service+$tot;
+
+      $sessionData = session()->all();
+
+       \request()->session()->put('pickDate', $response);
+        \request()->session()->put('pickLocation', $pickUpLocation);
+         \request()->session()->put('dropDate', $dropDate);
+          \request()->session()->put('desc', $desc);
+           \request()->session()->put('totalPay', $tot);
+           \request()->session()->put('days', $days);
+            \request()->session()->put('basePrice', $basePrice);
+            \request()->session()->put('service', $service);
+            \request()->session()->put('gtotal', $g_total);
+
+       // var_dump($sessionData['pickDate']);
+
+      echo json_encode($response);
+
+   }
+
 }
