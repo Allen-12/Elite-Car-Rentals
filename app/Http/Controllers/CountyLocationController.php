@@ -10,7 +10,7 @@ class CountyLocationController extends Controller
 {
     public function create(County $county)
     {
-        $countyLocations = CountyLocation::with('county')->get();
+        $countyLocations = $county->load('countyLocations');
 //        dd($countyLocations);
 
         return view('admin_county_location.create',compact('county','countyLocations'));

@@ -31,10 +31,10 @@
                     <th scope="col"></th>
                 </thead>
                 <tbody>
-                    @foreach($countyLocations as $countyLocation)
+                    @foreach($countyLocations->countyLocations as $countyLocation)
                         <tr>
                             <td>{{$countyLocation->id}}</td>
-                            <td>{{$countyLocation->county->county_name}}</td>
+                            <td>{{$countyLocations->county_name}}</td>
                             <td>{{$countyLocation->name}}</td>
                             <td><a href="/admin/cartypes/{{ $county->id }}/countylocations/edit" class="btn btn-warning">Edit</a></td>
                         </tr>

@@ -97,7 +97,7 @@ class BookingController extends Controller
                 if ($booking->pickup_date == $pickUpDateConverted || $booking->drop_off_date == $dropOffDateConverted)
                 {
                     $booked = true;
-                    return redirect()->action('LandingPageController@index')->with('status','Invalid Booking! Please pick a different pickup date and drop off date');
+                    return redirect()->action('LandingPageController@index')->with('status','Booking already exists. Please pick different dates.');
 //                    dd($booked);
                 }
             }
