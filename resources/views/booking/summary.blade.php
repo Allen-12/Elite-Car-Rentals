@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 
 @section('content')
     <style >
@@ -18,7 +18,7 @@
         .tab {
             padding-left: 8px;
         }
-       
+
         .col-sm-7{
             border-right: 1px solid;
         }
@@ -118,8 +118,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript">
-        
-       
+
+
                 var tot = document.getElementById("totalfee").innerHTML;
                 var days = document.getElementById("days").innerHTML;
                 var desc = document.getElementById("desc").innerHTML;
