@@ -27,7 +27,7 @@ class BookingController extends Controller
         $vehicles = CarDescription::with('carType')
                     ->where('availability','=','1')
                     ->get();
-//
+
         $sessionData = session()->all();
         $pickUpCounty = County::where('id',$sessionData['pickUpCounty'])->get();
         $pickUpCountyLocation = CountyLocation::where('id',$sessionData['pickUpCountyLocation'])->get();
