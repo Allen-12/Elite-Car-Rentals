@@ -29,63 +29,56 @@ class BillingPDF extends Controller
 {
 	public function attachment_email()
     {
-      $sessionData = session()->all();
-      $data = array('name'=>"Elite Car Rentals");
-      $pdf = PDF::loadView('mails.mymail',$data);
+        $sessionData = session()->all();
+        $data = array('name'=>"Elite Car Rentals");
+        $pdf = PDF::loadView('mails.mymail',$data);
 
-      $userData = Auth::user()->all();
+        $userData = Auth::user()->all();
 
-      var_dump($userData);
+        Mail::send('mail', $data, function($message) use($pdf)
+        {
+            $message->to(Auth::user()->email, Auth::user()->last_name)->subject
+            ('Invoice - Elite Car Rentals ');
 
-      echo "<br>";
-      echo "<br>";
+            $message->attachData($pdf->output(),"Invoice.pdf");
 
-      var_dump(Auth::user()->email);
+            $message->from('elitecarrentals.2020@gmail.com','Elite Car Rentals');
+        });
 
-     Mail::send('mail', $data, function($message) use($pdf)
-     {
-        $message->to(Auth::user()->email, Auth::user()->last_name)->subject
-           ('Invoice - Elite Car Rentals ');
-
-        $message->attachData($pdf->output(),"Invoice.pdf");
-
-        $message->from('elitecarrentals.2020@gmail.com','Elite Car Rentals');
-     });
-     
-       // return $pdf->stream();
+        return view('mails.response');
    }
 
    public function getData(Request $request)
    {
-     # code...
+       # code...
 
-      $response = $request->pickDate;
+       $response = $request->pickDate;
 
-      $tot = $request->total;
-      $days = $request->days;
-      $desc= $request->desc;
-      $dropDate = $request->dropDate;
-      $dropLocation = $request->dropOffLocation;
-      $pickUpLocation=$request->pickUpLocation;
-      $basePrice = $tot/$days;
-      $service = 1500;
-      $g_total = $service+$tot;
+       $tot = $request->total;
+       $days = $request->days;
+       $desc= $request->desc;
+       $dropDate = $request->dropDate;
+       $dropLocation = $request->dropOffLocation;
+       $pickUpLocation=$request->pickUpLocation;
+       $basePrice = $tot/$days;
+       $service = 1500;
+       $g_total = $service+$tot;
 
-      $sessionData = session()->all();
+       $sessionData = session()->all();
 
        \request()->session()->put('pickDate', $response);
-        \request()->session()->put('pickLocation', $pickUpLocation);
-         \request()->session()->put('dropDate', $dropDate);
-          \request()->session()->put('desc', $desc);
-           \request()->session()->put('totalPay', $tot);
-           \request()->session()->put('days', $days);
-            \request()->session()->put('basePrice', $basePrice);
-            \request()->session()->put('service', $service);
-            \request()->session()->put('gtotal', $g_total);
+       \request()->session()->put('pickLocation', $pickUpLocation);
+       \request()->session()->put('dropDate', $dropDate);
+       \request()->session()->put('desc', $desc);
+       \request()->session()->put('totalPay', $tot);
+       \request()->session()->put('days', $days);
+       \request()->session()->put('basePrice', $basePrice);
+       \request()->session()->put('service', $service);
+       \request()->session()->put('gtotal', $g_total);
 
        // var_dump($sessionData['pickDate']);
 
-      echo json_encode($response);
+       echo json_encode($response);
 
    }
 

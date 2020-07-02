@@ -365,49 +365,4 @@
             }
         });
     });
-    // $('#sameDropOffLocation').click(function (){
-    //     $(this).val(this.checked ? "TRUE" : "FALSE");
-    //     let sameDropOff = $(this).val();
-    //     console.log(sameDropOff);
-    //     if (sameDropOff)
-    //     {
-    //         let pickUpCountyID = $('#countiesPickUp').children("option:selected").val();
-    //         let pickUpCountyLocationID = $('#countyLocationsPickUp').children("option:selected").val();
-    //         console.log(pickUpCountyID);
-    //         console.log(pickUpCountyLocationID);
-    //         checkURLCounty = checkURLCounty + "sameDropOffLocation/" + pickUpCountyID;
-    //         checkURLCountyLocation = checkURLCountyLocation + "sameDropOffLocation/" + pickUpCountyLocationID;
-    //         console.log(checkURLCounty);
-    //         console.log(checkURLCountyLocation);
-    //         $.ajax({
-    //             url: checkURLCounty,
-    //             type: "GET",
-    //             dataType: "json",
-    //             success: function (data) {
-    //                 console.log(Object.keys(data)[0]);
-    //                 $('#countiesDropOff').val(Object.keys(data)[0]);
-    //                 $('#countiesDropOff').find("option").filter(function () {
-    //                     return this.innerHTML == data[Object.keys(data)[0]];
-    //                 }).attr("selected",true);
-    //                 checkURLCounty = "/";
-    //                 console.log(checkURLCounty);
-    //             }
-    //         });
-    //
-    //         $.ajax({
-    //             url: checkURLCountyLocation,
-    //             type: "GET",
-    //             dataType: "json",
-    //             success: function (data) {
-    //                 console.log(Object.keys(data)[0]);
-    //                 $('#countyLocationsDropOff').val(Object.keys(data)[0]);
-    //                 $('#countyLocationsDropOff').find("option").filter(function () {
-    //                     return this.innerHTML == data[Object.keys(data)[0]];
-    //                 }).attr("selected",true);
-    //                 checkURLCountyLocation = "/";
-    //                 console.log(checkURLCountyLocation);
-    //             }
-    //         });
-    //     }
-    // });
 })(jQuery);
