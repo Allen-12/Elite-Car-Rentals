@@ -21,11 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark ftco_navbar bg-dark ftco-navbar-light"  id="ftco-navbar" style="background-image: url('{{ asset('images/car1.jpg') }}">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <a class="navbar-brand" href="{{ url('/') }}">    <img src = "{{ asset('images/elitelogo2.png') }}" style="height: 100px; width: 130px;" ></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

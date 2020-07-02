@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/emailpdf','BillingPDF@attachment_email');
 Route::get('/', 'LandingPageController@index');
 Route::get('countyLocations/{countyName}','LandingPageController@getCountyLocations');
 
@@ -60,6 +61,12 @@ Route::get('/mailpdf','BillingPDF@attachment_email');
 
 // email_page is the route name i'm giving the view, let's see if it will work
 
+Route::get('/about', function (){
+    return view('about.about');
+});
+
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/summary/data','BillingPDF@getData');

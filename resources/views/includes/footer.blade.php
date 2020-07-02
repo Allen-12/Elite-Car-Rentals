@@ -43,7 +43,7 @@
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text">Nairobi, Kenya</span></li>
                   <li><a href="#"><span class="icon icon-phone"></span><span class="text">0712254675</span></a></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">&nbsp;&nbsp;&nbsp;&nbsp;elitecarrentals.2020@gmail.com</span></a></li>
                 </ul>
               </div>
           </div>
@@ -52,10 +52,10 @@
       <div class="row">
         <div class="col-md-12 text-center">
 
-         
+
         </div>
       </div>
     </div>
   </footer>
-  
+
 

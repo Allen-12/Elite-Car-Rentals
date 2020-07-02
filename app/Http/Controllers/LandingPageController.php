@@ -24,4 +24,16 @@ class LandingPageController extends Controller
         $countyLocations = CountyLocation::where('county_id',$countyID)->pluck('name','id');
         return json_encode($countyLocations);
     }
+
+    public function sameDropOffLocationCounty($pickUpCountyID)
+    {
+        $pickUpCounty = County::where('id',$pickUpCountyID)->pluck('county_name','id');
+        return json_encode($pickUpCounty);
+    }
+
+    public function sameDropOffLocationCountyLocation($pickUpCountyLocationID)
+    {
+        $pickUpCountyLocation = CountyLocation::where('id',$pickUpCountyLocationID)->pluck('name','id');
+        return json_encode($pickUpCountyLocation);
+    }
 }

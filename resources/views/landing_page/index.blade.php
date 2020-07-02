@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="hero-wrap" style="background-image: url('images/car1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap" style="background-image: url({{asset('images/car1.jpg')}});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center">
@@ -9,14 +9,6 @@
                     <div class="text">
                         <h1 class="mb-4">Now <span>It's easy for you</span> <span>rent a car</span></h1>
                         <p style="font-size: 18px;">Daily car rental deals on saloons, suvs, vans, compact 4wd</p>
-                        <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="ion-ios-play"></span>
-                            </div>
-                            <div class="heading-title ml-5">
-                                <span>View deals</span>
-                            </div>
-                        </a>
                     </div>
                 </div>
                 <div class="col-lg-2 col"></div>
@@ -48,6 +40,12 @@
                                 @enderror
                             </div>
                         </div>
+{{--                        <div class="d-flex">--}}
+{{--                            <div class="form-check">--}}
+{{--                                <input type="checkbox" value="FALSE" class="form-check-input" id="sameDropOffLocation">--}}
+{{--                                <label class="form-check-label" for="sameDropOffLocation">Similar Drop-Off Location</label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="d-flex">
                             <div class="form-group mr-2">
                                 <label for="pickup_date" class="label">Pick-up date</label>
@@ -128,7 +126,6 @@
                         <div class="row">
                             <div class="col">
                                 <div class="mx-auto w-50 p-3  text-center">
-{{--                                    <input type="submit" value="Search Vehicle" class="btn btn-primary py-3 px-4">--}}
                                     <a class="btn btn-primary py-3 px-4" href="/">Search for a Vehicle</a>
                                 </div>
                             </div>
@@ -152,7 +149,7 @@
 
                         <p>Welcome to Elite Car Rental we pride ourselves in providing you with the best car rental services in Kenya. If you'd like to receive a free no-obligation quotation for your car rental in Kenya, please fill the form below. Our very affordable car rental services include: saloon car rental, 4X4 car Rental, Offroad Car Rental, Bus and Van Rental, Station Wagon Rental, Double cabin Rental, Truck rental and more</p>
                         <p>You can pick and drop off our cars in Nairobi at Jomo Kenyatta International AIrport, Wilson Airport or at any Hotel in Nairobi. In Kisumu you can pick and drop our cars in Kisumu Airport, in Kisumu Railway station and in any Hotel in Kisumu. In Mombasa, you can pick our cars at the Moi International Airport, in Malindi, Lamu, Watamu and any hotel in both north and south Coast areas.</p>
-                        <p><a href="#" class="btn btn-primary">Search Vehicle</a></p>
+                        <p><a href="/" class="btn btn-primary">Search Vehicle</a></p>
                     </div>
                 </div>
             </div>
@@ -227,7 +224,6 @@
                         <div class="media-body py-md-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
                             <h3>Pick Destination</h3>
-                            <p>A small river named Duden flows by their place and supplies it with you</p>
                         </div>
                     </div>
                 </div>
@@ -235,8 +231,7 @@
                     <div class="media block-6 services services-2">
                         <div class="media-body py-md-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-select"></span></div>
-                            <h3>Select Term</h3>
-                            <p>A small river named Duden flows by their place and supplies it with you</p>
+                            <h3>View Cars</h3>
                         </div>
                     </div>
                 </div>
@@ -245,7 +240,6 @@
                         <div class="media-body py-md-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
                             <h3>Choose A Car</h3>
-                            <p>A small river named Duden flows by their place and supplies it with you</p>
                         </div>
                     </div>
                 </div>
@@ -254,7 +248,6 @@
                         <div class="media-body py-md-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-review"></span></div>
                             <h3>Enjoy The Ride</h3>
-                            <p>A small river named Duden flows by their place and supplies it with you</p>
                         </div>
                     </div>
                 </div>

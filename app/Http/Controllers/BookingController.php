@@ -108,6 +108,6 @@ class BookingController extends Controller
                 Booking::create($data);
             }
         }
-        return view('mails.mymail');
+        return redirect()->action('BillingPDF@attachment_email');
     }
 }
