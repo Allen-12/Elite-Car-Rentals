@@ -315,8 +315,6 @@
 
 	let pickUpURL = "/";
     let dropOffURL = "/";
-    let checkURLCounty = "/";
-    let checkURLCountyLocation = "/";
     console.log(pickUpURL);
 
     // Populating the county location dropdown based on the county selected
