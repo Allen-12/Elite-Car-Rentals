@@ -22,11 +22,17 @@ Route::get('countyLocations/{countyName}','LandingPageController@getCountyLocati
 Route::get('/bookings','BookingController@index');
 Route::get('/bookings/summary','BookingController@summary');
 Route::get('/bookings/completeBooking','BookingController@completeBooking')->middleware('auth');
+Route::get('/bookings/edit','BookingController@edit');
 
 // Session Routes
 Route::post('/sessions/landingpage','SessionController@storeLandingPageDetails');
 Route::get('/sessions/bookings/{carDescription}','SessionController@storeVehicles');
 
+//User dashboard routes
+Route::get('/user','UserDashboardController@index');
+Route::get('/user/{id}','UserDashboardController@profile')->name('user.profile');
+Route::get('/edit/user/','UserDashboardController@edit')->name('user.edit');
+Route::post('/update/user/','UserDashboardController@update')->name('user.update');
 
 // Elite Administrator Routes
 Route::get('/admin','AdminDashboardController@index');

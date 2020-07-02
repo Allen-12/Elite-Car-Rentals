@@ -18,6 +18,7 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                             <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                            
 
                             @guest
                                 <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log In</a></li>
@@ -36,6 +37,7 @@
                                         </form>
                                     </div>
                                 </li>
+
                             @endguest
                             {{-- <li class="nav-item"><a href="/" class="nav-link"><h5>Log Out</h5></a></li> --}}
                         </ul>
