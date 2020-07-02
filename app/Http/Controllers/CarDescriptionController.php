@@ -36,7 +36,7 @@ class CarDescriptionController extends Controller
     {
         $vehicles = CarDescription::where('car_type_id','=',$carType->id)->get();
 //        dd($vehicles);
-        return view('admin_car_description.index',compact('vehicles'));
+        return view('admin_car_description.index',compact('vehicles','carType'));
     }
 
     public function edit(CarDescription $carDescription)
