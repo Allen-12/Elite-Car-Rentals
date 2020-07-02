@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Booking;
+use App\User;
 use Carbon\Carbon;
 use App\CarDescription;
 use App\County;
@@ -67,7 +68,7 @@ class BookingController extends Controller
 //         dd($vehicles);
         return view('booking.summary',compact('vehicles','sessionData','locations','date_diff','total_price'));
     }
-
+     
     public function completeBooking()
     {
         if(Auth::check())
